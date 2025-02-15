@@ -27,7 +27,19 @@
 
 <body>
 
-  <!--
+    <!-- Theme Toggle Buttons -->
+    <div class="theme-toggle">
+      <button id="dark-mode" title="Dark Mode">
+        <ion-icon name="moon"></ion-icon>
+      </button>
+      <button id="light-mode" title="Light Mode">
+        <ion-icon name="sunny"></ion-icon>
+      </button>
+      <button id="system-theme" title="System Theme">
+        <ion-icon name="desktop"></ion-icon>
+      </button>
+    </div>
+    <!--
     - #MAIN
   -->
 
@@ -137,12 +149,6 @@
           <li class="social-item">
             <a href="https://www.linkedin.com/in/dhivakaran-t/" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.naukri.com/mnjuser/profile?id=&altresid" class="social-link">
-              <ion-icon name="./assets/images/naukri.png"></ion-icon>
             </a>
           </li>
 
@@ -694,48 +700,68 @@
       -->
 
       <article class="contact" data-page="contact">
-
         <header>
-          <h2 class="h2 article-title">Contact</h2>
+          <h2 class="h2 article-title">Contact Me</h2>
         </header>
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-            width="300"
-            height="400"
-            style="border:0"
-            loading="lazy"
-            allowfullscreen
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d391.7508898646869!2d80.23590087772745!3d12.878717686565606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1720119630212!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>">
-          </iframe>
-          
-          </figure>
+      <!-- Social Links Section -->
+      <section class="social-links">
+        <h3 class="h3 social-title">Connect With Me</h3>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/dhivakaran-t/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+              <span>Let's Connect on LinkedIn</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.naukri.com/mnjuser/profile?id=&altresid" class="social-link">
+              <img src="./assets/images/naukri.png" alt="Naukri Logo" width="24" height="24">
+              <span>Check me on naukri</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <div class="note">
+        <p><span class="demo">Get in Touch</span> and <span class="demo">Comments</span> are for demo</p>
+      </div>
+      
+        <!-- Contact Intro Section -->
+        <section class="contact-intro">
+          <p>Get a question? Send me a message, and I'll get back to you soon.</p>
+          <p>Have something to discuss? Send me a message and let's talk.</p>
         </section>
-
+      
+        <!-- Contact Form Section -->
         <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
+          <h3 class="h3 form-title">Get in Touch</h3>
           <form action="#" class="form" data-form>
-
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="text" name="fullname" class="form-input" placeholder="Your Name *" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Your Email *" required data-form-input>
             </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
+            <textarea name="message" class="form-input" placeholder="Your Message *" required data-form-input></textarea>
+            <div class="file-upload">
+              <label for="profile-photo">Profile Photo (optional)</label>
+              <input type="file" id="profile-photo" name="profile-photo" accept="image/*">
+              <small>Max file size: 5MB</small>
+            </div>
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
-
           </form>
-
         </section>
-
+      
+        <!-- Comments Section -->
+        <section class="comments">
+          <h3 class="h3 comments-title">Comments</h3>
+          <div class="comment-form">
+            <textarea class="form-input" placeholder="Write your comment here..."></textarea>
+            <button class="comment-btn">Post Comment</button>
+          </div>
+        </section>
       </article>
 
     </div>
