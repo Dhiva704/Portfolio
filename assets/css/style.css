@@ -880,7 +880,7 @@ main {
 
 /* Company description text */
 .timeline-text {
-  color: var(--text-dark-brown); /* Tailwind gray-300 */
+  color: #d1d5db; /* Tailwind gray-300 */
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 10px;
