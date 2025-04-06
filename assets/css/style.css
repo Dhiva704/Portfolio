@@ -888,6 +888,18 @@ main {
   line-height: 1.6;
 }
 
+.timeline-bullets {
+  list-style-type: disc; /* This restores the bullet points */
+  padding-left: 1.5rem;  /* Adds spacing so bullets don't sit flush with the edge */
+  margin-top: 1rem;
+}
+
+.timeline-bullets li {
+  margin-bottom: 0.5rem;
+  color: #374151; /* Optional: Tailwind gray-700 for better readability */
+  line-height: 1.6;
+}
+
 /**
  * skills 
  */
