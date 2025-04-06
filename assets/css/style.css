@@ -837,7 +837,7 @@ main {
   margin-bottom: 40px;
 }
 
-/* Vertical line for timeline */
+/* Vertical connecting line */
 .timeline-item:not(:last-child)::before {
   content: "";
   position: absolute;
@@ -845,10 +845,10 @@ main {
   left: -30px;
   width: 1px;
   height: calc(100% + 50px);
-  background: var(--icon-champagne, #ddd); /* fallback color */
+  background: var(--icon-champagne, #e5e7eb);
 }
 
-/* Timeline node (circle) */
+/* Circle marker on timeline */
 .timeline-item::after {
   content: "";
   position: absolute;
@@ -856,52 +856,72 @@ main {
   left: -33px;
   height: 8px;
   width: 8px;
-  background: var(--icon-gold, #facc15); /* fallback color */
+  background: var(--icon-gold, #facc15);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--icon-champagne, #fef3c7);
 }
 
-/* ===== Title & Meta Info ===== */
+/* ===== Titles ===== */
 .timeline-item-title {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #1f2937; /* gray-900 */
+  color: #ffffff;
   margin-bottom: 5px;
 }
 
+/* Date text */
 .timeline span {
-  color: var(--icon-gold, #f59e0b);
+  color: var(--icon-gold, #facc15);
   font-weight: 500;
   display: block;
   margin-bottom: 10px;
+  font-size: 1rem;
 }
 
-/* ===== Timeline Description ===== */
+/* Company description text */
 .timeline-text {
-  color: #4b5563; /* gray-700 */
+  color: #d1d5db; /* Tailwind gray-300 */
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 10px;
 }
 
-/* ===== Bullet List Styling ===== */
+/* ===== Custom Bullet List with Icons ===== */
 .timeline-bullets {
-  list-style-type: disc !important;
-  display: block !important;
-  padding-left: 1.5rem !important;
+  list-style: none;
+  padding-left: 0;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  position: relative;
-  z-index: 1;
 }
 
 .timeline-bullets li {
-  display: list-item !important;
-  list-style-type: disc !important;
-  color: #374151; /* gray-800 */
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #9ca3af; /* Tailwind gray-400 */
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+/* Font Awesome icon before each item */
+.timeline-bullets li::before {
+  content: "\f058"; /* check-circle */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900; /* solid icon */
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #facc15; /* Tailwind yellow-400 */
+  font-size: 1rem;
+}
+
+/* Optional: Section title */
+.timeline .section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 /**
