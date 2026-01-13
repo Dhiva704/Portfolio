@@ -5,831 +5,322 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dhivakaran - Personal Portfolio</title>
+  <title>Dhivakaran T | SRE & DevOps Portfolio</title>
 
-  <!--
-    - favicon
-  -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
 
-    <!-- Theme Toggle Buttons -->
-    <div class="theme-toggle">
-      <button id="dark-mode" title="Dark Mode">
-        <ion-icon name="moon"></ion-icon>
-      </button>
-      <button id="light-mode" title="Light Mode">
-        <ion-icon name="sunny"></ion-icon>
-      </button>
-      <button id="system-theme" title="System Theme">
-        <ion-icon name="desktop"></ion-icon>
-      </button>
-    </div>
-    <!--
-    - #MAIN
-  -->
-
   <main>
-
-    <!--
-      - #SIDEBAR
-    -->
 
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
-
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+          <img src="./assets/images/my-avatar.png" alt="Dhivakaran T" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Dhivakaran T
-          </h1>
-
-          <p class="title">Site Operation Engineer</p>
+          <h1 class="name" title="Dhivakaran T">Dhivakaran T</h1>
+          <p class="title">SRE & DevOps Engineer</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
-
           <ion-icon name="chevron-down"></ion-icon>
         </button>
-
       </div>
 
       <div class="sidebar-info_more">
-
         <div class="separator"></div>
-
         <ul class="contacts-list">
-
           <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Email</p>
-
-              <a href="mailto:richard@example.com" class="contact-link">devadhiva704@gmail.com</a>
+              <a href="mailto:devadhiva704@gmail.com" class="contact-link">devadhiva704@gmail.com</a>
             </div>
-
           </li>
 
           <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
+            <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">(+91) 6383594628</a>
+              <a href="tel:+916383594628" class="contact-link">+91 6383594628</a>
             </div>
-
           </li>
 
           <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">July 05, 1998</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Location</p>
-
-              <address>Chennai, Tamil Nadu              </address>
+              <address>Chennai, Tamil Nadu</address>
             </div>
-
           </li>
-
         </ul>
 
         <div class="separator"></div>
 
         <ul class="social-list">
-
           <li class="social-item">
-            <a href="https://github.com/Dhiva704" class="social-link">
+            <a href="https://github.com/Dhiva704" class="social-link" target="_blank">
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
-            <a href="https://www.linkedin.com/in/dhivakaran-t/" class="social-link">
+            <a href="https://www.linkedin.com/in/dhivakaran-t/" class="social-link" target="_blank">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
-
         </ul>
-
       </div>
-
     </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
 
     <div class="main-content">
 
-      <!--
-        - #NAVBAR
-      -->
-
       <nav class="navbar">
-
         <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li> -->
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Certificates</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
+          <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
         </ul>
-
       </nav>
 
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
+      <article class="about active" data-page="about">
         <header>
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title">About Me</h2>
         </header>
 
         <section class="about-text">
           <p>
-            Results-driven and proactive Senior Engineering Operations with 5+ years of experience ensuring the availability, scalability, and performance of critical infrastructure. 
-            Proven expertise in monitoring system, AWS cloud, automation using automation tools and incident response. 
-            Capable at performing root cause analysis, leading war -room, and developing solutions to alert reduction, system stability and reliability. 
-            Experienced in handling high pressure environments, multitasking, cross-functional collaboration, and continuous improvement activities. 
-            Passionate about leveraging automation and DevOps practices to drive operational excellence.
+            Results-oriented <strong>Site Reliability Engineer (SRE)</strong> and <strong>DevOps professional</strong> with 5+ years of experience optimizing cloud infrastructure and operational workflows. 
+            I specialize in designing scalable <strong>AWS environments</strong>, automating complex workflows with <strong>N8n</strong> & <strong>Terraform</strong>, and ensuring high system availability.
           </p>
-          
+          <p>
+            Currently ensuring broadcast reliability for <strong>Comcast</strong>. My expertise lies in reducing MTTR through proactive monitoring (Prometheus/Grafana) and leading critical incident response strategies.
+          </p>
         </section>
 
-
-        <!--
-          - service
-        -->
-
         <section class="service">
-
-          <h3 class="h3 service-title">Key Achievements</h3>
-
+          <h3 class="h3 service-title">Technical Expertise</h3>
           <ul class="service-list">
 
             <li class="service-item">
-
               <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                <i class="fa-brands fa-aws"></i>
               </div>
-
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Broadcast & Streaming Signal Reliability</h4>
-
+                <h4 class="h4 service-item-title">Cloud Infrastructure</h4>
                 <p class="service-item-text">
-                  Tech Stack: Opsgenie, Nagios, Jira, Zendesk 
-                  Achievements: Ensured 99.98% uptime for linear and streaming platforms; led multiple RCA sessions and escalations. 
-                  Impact: Improved response time during outages by 30% through proactive alerting and SOP refinements.
+                  Architecting resilient solutions on AWS (EC2, VPC, S3, RDS, Route53) with a focus on high availability.
                 </p>
               </div>
-
             </li>
 
             <li class="service-item">
-
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                <i class="fa-solid fa-chart-line"></i>
               </div>
-
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Kubernetes Incident Response Automation</h4>
-
+                <h4 class="h4 service-item-title">Observability</h4>
                 <p class="service-item-text">
-                  Tech Stack: Kubernetes, Prometheus, Grafana, N8n 
-                  Achievements: Reduced troubleshooting time by 20%, automated alert workflows, and minimized noisy alerts. 
-                  Impact: Elevated team productivity by 40% and improved platform reliability significantly.
+                  Deep monitoring using Prometheus, Grafana, Opsgenie, and ELK Stack to minimize downtime.
                 </p>
               </div>
-
             </li>
 
             <li class="service-item">
-
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-               
+                <i class="fa-solid fa-gears"></i>
               </div>
-
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Cloud Infrastructure Monitoring Optimization</h4>
-
+                <h4 class="h4 service-item-title">Automation & IaC</h4>
                 <p class="service-item-text">
-                  Tech Stack: AWS, CloudWatch, SNS, Custom APIs 
-                  Achievements: Migrated alerts from CloudWatch to custom platforms, improving alert accuracy and team collaboration. 
-                  Impact: Enabled faster escalations and better cross-functional communication.
+                  Infrastructure as Code with Terraform and workflow automation using N8n and Python/Bash.
                 </p>
               </div>
-
             </li>
-<!--
+
             <li class="service-item">
-
               <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                <i class="fa-solid fa-triangle-exclamation"></i>
               </div>
-
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Operational Automation Excellence</h4>
-
+                <h4 class="h4 service-item-title">Incident Management</h4>
                 <p class="service-item-text">
-                  Enhanced productivity by 40% designing operational automation workflows.
+                  Leading War Rooms, Root Cause Analysis (RCA), and SLA adherence for critical outages.
                 </p>
               </div>
-
             </li>
--->
-          </ul>
-
-        </section>
-
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Work Experience</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="https://www.cognisive.com/">
-                <img id="cogni"src="./assets/images/logo-dark.svg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.freshworks.com/">
-                <img src="./assets/images/freshworks-logo.svg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://corporate.comcast.com/">
-                <img src="./assets/images/comcast_Logo.png" alt="client logo">
-              </a>
-            </li>
-
-          
-          
 
           </ul>
-
         </section>
-
       </article>
 
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
       <article class="resume" data-page="resume">
-
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
         <section class="timeline">
-
           <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
+            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
             <h3 class="h3">Experience</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Comcast</h4>
-              <h4 class="h4 timeline-item-title">Senior Site Operations Engineer </h4>
-
+              <h4 class="h4 timeline-item-title">Senior Engineering Operations</h4>
               <span>04/2024 — Present</span>
-              
-              <p class="timeline-text">
-                A major telecommunications company providing various communication and entertainment services.
-              </p>
+              <p class="timeline-text company-tag">COMCAST (Telecommunications)</p>
               <ul class="timeline-bullets">
-                <li>Led operations for Comcast’s Linear Media services, ensuring reliability and availability of broadcast and streaming signal paths across national platforms.</li>
-                <li>Acted as the primary escalation point and SME for critical incidents involving media pipelines and playout systems.</li>
-                <li>Monitored production systems with Opsgenie and Nagios, responding to alerts and proactively identifying anomalies to maintain high system availability.</li>
-                <li>Led cross-functional war room efforts during outages, performed RCA, and coordinated with engineering, NOC, and executives.</li>
-                <li>Managed incident lifecycles using Jira and Zendesk, ensuring SLA compliance and thorough documentation.</li>
-                <li>Mentored junior engineers on best practices in incident management, monitoring, and broadcast operations.</li>
-                <li>Developed SOPs, runbooks, and process docs to support 24/7 global operations coverage.</li>
+                <li>Ensure broadcast reliability and availability of Linear Media services.</li>
+                <li>Lead cross-functional war room operations during critical outages and oversee RCA.</li>
+                <li>Manage large-scale AWS cloud infrastructure ensuring security and scalability.</li>
+                <li>Monitor production systems using Opsgenie and Nagios to identify anomalies.</li>
+                <li>Orchestrate incident lifecycle management using Zendesk and Jira.</li>
               </ul>
             </li>
 
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Freshworks</h4>
               <h4 class="h4 timeline-item-title">Senior NOC Engineer</h4>
-              
               <span>10/2023 — 04/2024</span>
-
-              <p class="timeline-text">
-                A software company that provides business management software for various business needs. 
-              </p>
+              <p class="timeline-text company-tag">FRESHWORKS (SaaS Product)</p>
               <ul class="timeline-bullets">
-                <li>Monitored and analysed system performance using Prometheus, Grafana, Nagios, and other monitoring tools.</li>
-                <li>Proactively identified and triaged incidents, handled product status pages and minimizing end-user impact during outages.</li>
-                <li>Administrated Kubernetes pods with assistance of product teams and reduced troubleshooting time by 20% during major incidents.</li>
-                <li>Improved system response times and monitoring efficiency by implementing Prometheus and Grafana with the assistance of SRE team. </li>
-                <li>Automated operational workflows with automation tool (N8n) which increased team productivity by 40%.</li>
-                <li>Reduced noisy alerts by 30% With support from product teams to improve incident prediction accuracy and platform stability.</li>
-                <li>Worked on configuring SNS topics and API integration to migrated Cloud-watch alerts to other monitoring tool </li>
+                <li>Led 24/7 NOC activities as the primary escalation point for critical incidents.</li>
+                <li>Deployed Infrastructure as Code (IaC) using Terraform for AWS resources.</li>
+                <li>Automated operational tasks using N8n, reducing manual intervention.</li>
+                <li>Collaborated with teams to containerize apps using Docker and Kubernetes.</li>
               </ul>
-
             </li>
 
             <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">NOC Engineer</h4>
-
               <span>03/2022 — 09/2023</span>
-
-              <p class="timeline-text">
-                A software company that provides business management software for various business needs. 
-              </p>
+              <p class="timeline-text company-tag">FRESHWORKS</p>
               <ul class="timeline-bullets">
-                <li>Monitored and maintained AWS based infrastructure supporting high-availability enterprise applications.</li>
-                <li>Implemented ITIL best practices for incident, problem, and change management.</li>
-                <li>Collaborated with the infrastructure team on disaster recovery activities, ensuring product availability during outages.</li>
-                <li>Worked with SRE teams to troubleshoot and resolve application-related issues.</li>
-                <li>Conducted war-rooms, summarizing RCA, meeting SLA deadlines and improving service stability.</li>
-                <li>Maintained AMI instances, ensuring smooth operations across various distributions.</li>
+                <li>Monitored server infrastructure using Nagios and ELK Stack (99.9% uptime).</li>
+                <li>Handled L1/L2 troubleshooting for Linux servers and documented RCA.</li>
               </ul>
-
-            </li>
-
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Cognisive (Formerly Indmax)</h4>
-              <h4 class="h4 timeline-item-title">Cloud Support Engineer</h4>
-
-              <span>09/2019 - 02/2022</span>
-
-              <p class="timeline-text">
-                A technology service provider focusing on innovative IT solutions.
-              </p>
-              <ul class="timeline-bullets">
-                <li>Experienced in maintaining system uptime and managing events using monitoring tools like Logic Monitor, Ops genie, and Wavefront.</li>
-                <li>Managing AWS services like EC2, VPC, S3, and AMI, including Compute, Network, Storage, and Identity.</li>
-                <li>Proficient in using bug-tracking tools like JIRA and documentation tools like Atlassian Confluence. </li>
-                <li>Providing high availability AWS EC2 instances with Auto Scaling and Elastic Load Balancing across all environments.</li>
-                <li>Preparing and delivering daily NetOps Stand-up reports using Confluence.</li>
-                <li>Verifying VM server services after deployment and handling tasks related to load balancing.</li>
-                <li>Conducting monthly patching across all environments (DEV, TEST, PRE-PROD, PROD) for both Windows and Linux.</li>
-              </ul>
-
             </li>
 
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Cognisive (Formerly Indmax)</h4>
-              <h4 class="h4 timeline-item-title">Internship</h4>
-
-              <span>05/2019 - 08/2019</span>
-
-              <p class="timeline-text">
-                A technology service provider focusing on innovative IT solutions.
-              </p>
+              <h4 class="h4 timeline-item-title">Cloud System Engineer</h4>
+              <span>09/2019 — 02/2022</span>
+              <p class="timeline-text company-tag">COGNISIVE IT SERVICES</p>
               <ul class="timeline-bullets">
-                <li>Provided Level 1 support for enterprise infrastructure by actively monitoring critical systems and services through LogicMonitor.</li>
-                <li>Investigated alerts and system anomalies, performing initial triage and escalating to L2 teams or clients based on defined SOPs and SLA impact.</li>
-                <li>Monitored real-time dashboards and alert queues, ensuring proactive identification of outages, service disruptions, or system degradations.</li>
-                <li>Coordinated with internal teams during incidents to facilitate prompt escalations and communication, ensuring minimal downtime.</li>
-                <li>Participated in daily standup meetings to report on active issues, system health, and handovers, contributing to continuous operations across shifts.</li>
-                <li>Maintained accurate and detailed logs of incidents, alerts, and handoffs to improve transparency and issue tracking.</li>
-                <li>Gained hands-on experience with ITIL-based support processes, enterprise NOC workflows, and communication protocols used in 24/7 environments.</li>
-                <li>Supported documentation efforts for runbooks and standard operating procedures for repetitive incident types and escalations.</li>
+                <li>Managed AWS resources (EC2, VPC, S3) and administered VMware vCenter.</li>
+                <li>Ensured system availability using LogicMonitor and Wavefront.</li>
               </ul>
-
             </li>
 
           </ol>
-
-        </section>
-        
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">B.E Computer science and engineering </h4>
-
-              <span>2019 With 70% </span>
-
-              <p class="timeline-text">
-                K.S.RANGASAMY COLLEGE OF TECHNOLOGY
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">HIGHER SECONDARY COURSE CERTIFICATE </h4>
-
-              <span>2015</span>
-
-              <p class="timeline-text">
-                ERODE HINDU KALVI NILAYAM MATRIC HSS MAMARATHUPALAYAM ERODE
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">SECONDARY SCHOOL LEAVING CERTIFICATE </h4>
-
-              <span>2013</span>
-
-              <p class="timeline-text">
-                SAGAR VIDYABAVAN MS PERUNDURAI
-              </p>
-
-            </li>
-
-          </ol>
-
         </section>
 
         <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
+          <h3 class="h3 skills-title">Technical Skills</h3>
           <ul class="skills-list content-card">
-
+            
             <li class="skills-item">
-
               <div class="title-wrapper">
-                <h5 class="h5">Monitoring & Observability: Opsgenie, Nagios, LogicMonitor, Prometheus, Grafana, PagerDuty</h5>
+                <h5 class="h5">AWS & Cloud Infrastructure</h5>
+                <data value="90">90%</data>
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
-                <h5 class="h5">Cloud & Infrastructure: AWS, Linux System Administration, Linear Media Infrastructure </h5>
+                <h5 class="h5">Observability (Prometheus/Grafana)</h5>
+                <data value="95">95%</data>
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 95%;"></div></div>
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
-                <h5 class="h5">Incident Management & Operations: L1 & L2 Support, SLA-Based Escalation, Root Cause Analysis (RCA), War Room Participation, Outage Management, On-call Support </h5>
+                <h5 class="h5">DevOps & Automation (Terraform/N8n)</h5>
+                <data value="85">85%</data>
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
-              </div>
-
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
-                <h5 class="h5">Containers & Automation: Docker, Kubernetes (operational knowledge), Bash & Python (basic) Scripting (for automation), CI/CD Collaboration</h5>
+                <h5 class="h5">Incident Management</h5>
+                <data value="95">95%</data>
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 40%;"></div>
-              </div>
-
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 95%;"></div></div>
             </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Ticketing & Documentation: Jira, Zendesk, SOP Creation, Post-Incident Reviews, Knowledge Base Maintenance </h5>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Communication & Team Collaboration: Daily Standups, Executive Reporting, Cross-functional Communication, Stakeholder Engagement, Mentorship </h5>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Soft skills: Incident Management, Root Cause Analysis, Cross-functional Leadership, Communication, Mentorship and Documentation</h5>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-
-
 
           </ul>
-
         </section>
-
       </article>
 
-
-
-
-
-      
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="certificates" data-page="certificates">
-
+      <article class="portfolio" data-page="portfolio">
         <header>
-          <h2 class="h2 article-title">Certificates</h2>
+          <h2 class="h2 article-title">Certifications</h2>
         </header>
 
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="https://www.credly.com/badges/fd0ec908-84fe-4d67-b453-364bba83dd11/linked_in_profile">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/aws.png" alt="Design conferences in 2022" loading="lazy">
-                </figure> 
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">AWS Certificate</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Oct, 2023 - oct, 2026</time>
+        <section class="projects">
+          <ul class="project-list">
+            
+            <li class="project-item active" data-filter-item data-category="aws">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <h3 class="h3 blog-item-title">AWS Certified Solutions Architect – Associate</h3>
-
-                  <p class="blog-text">
-                    Certification holders understand AWS services and can design secure, scalable, resilient, efficient, and fault-tolerant systems based on customer needs.
-                  </p>
-
-                </div>
-
+                  <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.3419559c682629072f1eb968d59dea0741772c0f.png" alt="AWS SAA" loading="lazy">
+                </figure>
+                <h3 class="project-title">AWS Solutions Architect – Associate</h3>
+                <p class="project-category">Cloud Architecture</p>
+                <p class="project-category">Valid: 2023 - 2026</p>
               </a>
             </li>
-            
+
           </ul>
-
         </section>
-
       </article>
-
-      <!--
-        - #CONTACT
-      -->
 
       <article class="contact" data-page="contact">
         <header>
-          <h2 class="h2 article-title">Contact Me</h2>
+          <h2 class="h2 article-title">Contact</h2>
         </header>
 
-      <!-- Social Links Section -->
-      <section class="social-links">
-        <h3 class="h3 social-title">Connect With Me</h3>
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/dhivakaran-t/" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-              <span>Let's Connect on LinkedIn</span>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://www.naukri.com/mnjuser/profile?id=&altresid" class="social-link">
-              <img src="./assets/images/naukri.png" alt="Naukri Logo" width="24" height="24">
-              <span>Check me on naukri</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <div class="note">
-        <p><span class="demo">Get in Touch</span> and <span class="demo">Comments</span> are for demo</p>
-      </div>
-      
-        <!-- Contact Intro Section -->
-        <section class="contact-intro">
-          <p>Get a question? Send me a message, and I'll get back to you soon.</p>
-          <p>Have something to discuss? Send me a message and let's talk.</p>
-        </section>
-      
-        <!-- Contact Form Section -->
         <section class="contact-form">
-          <h3 class="h3 form-title">Get in Touch</h3>
+          <h3 class="h3 form-title">Get In Touch</h3>
           <form action="#" class="form" data-form>
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Your Name *" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Your Email *" required data-form-input>
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
-            <textarea name="message" class="form-input" placeholder="Your Message *" required data-form-input></textarea>
-            <div class="file-upload">
-              <label for="profile-photo">Profile Photo (optional)</label>
-              <input type="file" id="profile-photo" name="profile-photo" accept="image/*">
-              <small>Max file size: 5MB</small>
-            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
           </form>
         </section>
-      
-        <!-- Comments Section -->
-        <section class="comments">
-          <h3 class="h3 comments-title">Comments</h3>
-          <div class="comment-form">
-            <textarea class="form-input" placeholder="Write your comment here..."></textarea>
-            <button class="comment-btn">Post Comment</button>
-          </div>
-        </section>
       </article>
 
     </div>
-
   </main>
 
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
   <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
-
 </html>
