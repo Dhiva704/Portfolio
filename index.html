@@ -12,15 +12,15 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#6366f1',   // Indigo
-                        secondary: '#ec4899', // Pink
-                        dark: '#0f172a',      // Slate 900
+                        primary: '#6366f1',
+                        secondary: '#ec4899',
+                        dark: '#0f172a',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                     },
                     animation: {
-                        'blob': 'blob 7s infinite',
+                        'blob': 'blob 10s infinite',
                         'float': 'float 6s ease-in-out infinite',
                     },
                     keyframes: {
@@ -43,46 +43,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <style>
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        .dark ::-webkit-scrollbar-track {
-            background: #0f172a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 5px;
-        }
-        .dark ::-webkit-scrollbar-thumb {
-            background: #334155;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-        
-        /* Glass Card Effect - Kept for Technical Arsenal */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        .dark .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-slate-50 text-slate-900 dark:bg-[#0f172a] dark:text-slate-100 transition-colors duration-500 selection:bg-pink-500 selection:text-white">
+<body class="bg-slate-50 text-slate-900 dark:bg-[#0b1120] dark:text-slate-100 transition-colors duration-500 selection:bg-indigo-500 selection:text-white overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/70 dark:bg-[#0f172a]/70 border-b border-slate-200 dark:border-white/10">
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/70 dark:bg-[#0b1120]/70 border-b border-slate-200 dark:border-white/10">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            
             <a href="#" class="flex flex-col leading-none group">
                 <span class="text-xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-pink-500 group-hover:to-indigo-500 transition-all duration-500">
                     DHIVAKARAN T
@@ -91,7 +58,6 @@
                     OPS ENGINEER
                 </span>
             </a>
-
             <div class="flex items-center gap-6">
                 <a href="assets/resume.pdf" target="_blank" class="hidden md:block text-sm font-semibold hover:text-indigo-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-indigo-500 after:transition-all hover:after:w-full">
                     Resume
@@ -105,13 +71,11 @@
     </nav>
 
     <section class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
-        
         <div class="absolute top-0 -left-4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
         <div class="absolute top-0 -right-4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
         <div class="absolute -bottom-8 left-20 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
 
         <div class="max-w-5xl mx-auto px-6 text-center z-10" data-aos="zoom-y-out" data-aos-duration="1000">
-            
             <div class="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-white/40 dark:bg-white/5 border border-white/20 backdrop-blur-md shadow-xl hover:scale-105 transition-transform cursor-default">
                 <span class="relative flex h-2.5 w-2.5">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -143,10 +107,6 @@
                     View Experience
                 </a>
             </div>
-        </div>
-        
-        <div class="absolute bottom-10 animate-float opacity-50">
-            <i data-lucide="chevron-down" class="w-10 h-10 text-slate-400"></i>
         </div>
     </section>
 
@@ -207,152 +167,191 @@
     </section>
 
     <section id="experience" class="py-32 relative">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-black mb-20 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500" data-aos="fade-up">Professional Journey</h2>
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-black mb-24 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500" data-aos="fade-up">Professional Journey</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                <div class="experience-card bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-900/50 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-indigo-100 dark:border-indigo-900" data-aos="fade-up">
-                    <span class="inline-block px-3 py-1 mb-6 text-sm font-bold tracking-wide text-indigo-800 bg-indigo-200/70 dark:text-indigo-200 dark:bg-indigo-900/70 rounded-full uppercase">Comcast</span>
-                    
-                    <h3 class="text-2xl font-black mb-4 text-slate-900 dark:text-white">Senior Engineering Ops</h3>
-                    
-                    <ul class="mb-6 space-y-3 text-slate-700 dark:text-slate-300 leading-relaxed list-disc pl-5 marker:text-indigo-500">
-                        <li>Ensure broadcast reliability, integrity, and availability of Comcast’s Linear Media services.</li>
-                        <li>Lead cross-functional war room operations during critical outages, overseeing Root Cause Analysis.</li>
-                        <li>Manage and optimize large-scale AWS cloud infrastructure ensuring high availability.</li>
-                    </ul>
-
-                    <div class="hidden-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
-                        <ul class="overflow-hidden space-y-3 text-slate-700 dark:text-slate-300 leading-relaxed list-disc pl-5 marker:text-indigo-500 opacity-0 transition-opacity duration-300 delay-100">
-                            <li>Monitor production systems using Opsgenie and Nagios, actively identifying anomalies.</li>
-                            <li>Orchestrate incident lifecycle management using Zendesk and Jira.</li>
-                            <li>Collaborate with cross-functional teams to maintain CI/CD pipelines (Jenkins/GitLab).</li>
-                            <li>Train junior engineers on incident management best practices.</li>
-                        </ul>
-                    </div>
-
-                    <button class="toggle-btn mt-2 flex items-center text-lg font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 transition-colors group/btn">
-                        Read more
-                        <i data-lucide="chevron-right" class="ml-2 w-5 h-5 transition-transform group-hover/btn:translate-x-1"></i>
-                    </button>
-                    
-                    <div class="mt-8 p-6 bg-white/70 dark:bg-black/30 rounded-2xl flex items-center justify-between backdrop-blur-sm">
-                        <img src="assets/img/comcast.svg" alt="Comcast" class="h-10 w-auto object-contain" onerror="this.parentNode.innerHTML='<span class=\'text-xl font-black text-indigo-800 dark:text-indigo-200\'>COMCAST</span>'">
-                        <span class="font-mono text-sm font-bold text-indigo-800 dark:text-indigo-200">Present</span>
-                    </div>
+            <div id="experience-track" class="relative ml-4 md:ml-12">
+                
+                <div id="static-line" class="absolute left-0 w-[2px] bg-slate-200 dark:bg-slate-700/50 rounded-full"></div>
+                <div id="line-progress" class="absolute left-0 w-[2px] bg-gradient-to-b from-indigo-500 via-pink-500 to-emerald-500 z-10 rounded-full" style="height: 0px;">
+                    <div class="absolute -bottom-2 -left-[7px] w-4 h-4 rounded-full bg-white dark:bg-slate-900 border-[3px] border-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.6)]"></div>
                 </div>
 
-                <div class="experience-card bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-950/50 dark:to-rose-900/50 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-pink-100 dark:border-pink-900" data-aos="fade-up" data-aos-delay="100">
-                    <span class="inline-block px-3 py-1 mb-6 text-sm font-bold tracking-wide text-pink-800 bg-pink-200/70 dark:text-pink-200 dark:bg-pink-900/70 rounded-full uppercase">Freshworks</span>
-                    
-                    <h3 class="text-2xl font-black mb-4 text-slate-900 dark:text-white">Senior NOC Engineer</h3>
-                    
-                    <ul class="mb-6 space-y-3 text-slate-700 dark:text-slate-300 leading-relaxed list-disc pl-5 marker:text-pink-500">
-                        <li>Led 24/7 Network Operations Center (NOC) activities as primary escalation point.</li>
-                        <li>Deployed and managed Infrastructure as Code (IaC) using Terraform for AWS.</li>
-                        <li>Designed and implemented automated workflow solutions using N8n.</li>
-                    </ul>
+                <div class="space-y-16">
+                
+                    <div class="relative pl-12 md:pl-20 group job-item" data-aos="fade-left">
+                        <div class="timeline-dot absolute -left-[7px] top-8 w-4 h-4 rounded-full border-4 border-slate-50 dark:border-slate-800 bg-indigo-500 z-20 group-hover:scale-150 transition-all duration-500 shadow-lg"></div>
+                        
+                        <div class="experience-card bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-900/50 p-8 rounded-[2rem] border border-indigo-100 dark:border-indigo-900/50 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 relative overflow-hidden">
+                            
+                            <div class="absolute top-0 right-0 bg-indigo-100 dark:bg-indigo-900/50 px-6 py-2 rounded-bl-2xl border-b border-l border-indigo-200 dark:border-indigo-800">
+                                <span class="font-mono text-xs font-bold text-indigo-700 dark:text-indigo-300 uppercase tracking-wider">Present</span>
+                            </div>
 
-                    <div class="hidden-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
-                        <ul class="overflow-hidden space-y-3 text-slate-700 dark:text-slate-300 leading-relaxed list-disc pl-5 marker:text-pink-500 opacity-0 transition-opacity duration-300 delay-100">
-                            <li>Enhanced system reliability by configuring advanced alerts in CloudWatch/Grafana.</li>
-                            <li>Collaborated with teams to containerize applications using Docker and Kubernetes.</li>
-                            <li>Implemented security best practices within AWS IAM and security groups.</li>
-                        </ul>
+                            <div class="flex items-center gap-5 mb-6 mt-2">
+                                <div class="w-16 h-16 bg-white rounded-2xl p-2 shadow-sm flex items-center justify-center shrink-0 border border-slate-100">
+                                    <img src="assets/img/comcast.svg" alt="Comcast" class="w-full h-auto object-contain" onerror="this.parentNode.innerHTML='<span class=\'text-xs font-black text-indigo-800\'>CMCSA</span>'">
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Senior Engineering Ops</h3>
+                                    <div class="text-indigo-600 dark:text-indigo-400 font-bold tracking-wide text-sm mt-1 uppercase">Comcast</div>
+                                </div>
+                            </div>
+
+                            <ul class="list-disc pl-5 space-y-3 text-slate-700 dark:text-slate-300 marker:text-indigo-500 text-base leading-relaxed">
+                                <li>Ensure broadcast reliability, integrity, and availability of Comcast’s Linear Media services.</li>
+                                <li>Lead cross-functional war room operations during critical outages, overseeing Root Cause Analysis.</li>
+                                <li>Manage and optimize large-scale AWS cloud infrastructure ensuring high availability.</li>
+                            </ul>
+
+                            <div class="hidden-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
+                                <ul class="overflow-hidden list-disc pl-5 space-y-3 text-slate-700 dark:text-slate-300 marker:text-indigo-500 text-base leading-relaxed pt-0 opacity-0 transition-opacity duration-300 delay-100 border-t border-dashed border-indigo-200 dark:border-indigo-800/50 mt-0">
+                                    <li class="pt-3">Monitor production systems using Opsgenie and Nagios, actively identifying anomalies.</li>
+                                    <li>Orchestrate incident lifecycle management using Zendesk and Jira.</li>
+                                    <li>Collaborate with cross-functional teams to maintain CI/CD pipelines (Jenkins/GitLab).</li>
+                                </ul>
+                            </div>
+
+                            <button class="toggle-btn flex items-center gap-2 mt-6 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 transition-colors w-full justify-center py-3 rounded-xl hover:bg-indigo-100/50 dark:hover:bg-indigo-900/30 cursor-pointer group/btn">
+                                <span>Read More</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-y-1"></i>
+                            </button>
+                        </div>
                     </div>
 
-                    <button class="toggle-btn mt-2 flex items-center text-lg font-bold text-pink-600 dark:text-pink-400 hover:text-pink-800 dark:hover:text-pink-200 transition-colors group/btn">
-                        Read more
-                        <i data-lucide="chevron-right" class="ml-2 w-5 h-5 transition-transform group-hover/btn:translate-x-1"></i>
-                    </button>
-                    
-                    <div class="mt-8 p-6 bg-white/70 dark:bg-black/30 rounded-2xl flex items-center justify-between backdrop-blur-sm">
-                        <img src="assets/img/freshworks.svg" alt="Freshworks" class="h-10 w-auto object-contain" onerror="this.parentNode.innerHTML='<span class=\'text-xl font-black text-pink-800 dark:text-pink-200\'>FRESHWORKS</span>'">
-                        <span class="font-mono text-sm font-bold text-pink-800 dark:text-pink-200">2023 - 2024</span>
+                    <div class="relative pl-12 md:pl-20 group job-item" data-aos="fade-left">
+                        <div class="timeline-dot absolute -left-[7px] top-8 w-4 h-4 rounded-full border-4 border-slate-50 dark:border-slate-800 bg-slate-300 dark:bg-slate-600 group-hover:bg-pink-500 z-20 group-hover:scale-150 transition-all duration-500 shadow-lg"></div>
+                        
+                        <div class="experience-card bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-950/50 dark:to-rose-900/50 p-8 rounded-[2rem] border border-pink-100 dark:border-pink-900/50 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/10 relative overflow-hidden">
+                            
+                            <div class="absolute top-0 right-0 bg-pink-100 dark:bg-pink-900/50 px-6 py-2 rounded-bl-2xl border-b border-l border-pink-200 dark:border-pink-800">
+                                <span class="font-mono text-xs font-bold text-pink-700 dark:text-pink-300 uppercase tracking-wider">2023 - 2024</span>
+                            </div>
+
+                            <div class="flex items-center gap-5 mb-6 mt-2">
+                                <div class="w-16 h-16 bg-white rounded-2xl p-2 shadow-sm flex items-center justify-center shrink-0 border border-slate-100">
+                                    <img src="assets/img/freshworks.svg" alt="Freshworks" class="w-full h-auto object-contain" onerror="this.parentNode.innerHTML='<span class=\'text-xs font-black text-pink-500\'>FRSH</span>'">
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Senior NOC Engineer</h3>
+                                    <div class="text-pink-600 dark:text-pink-400 font-bold tracking-wide text-sm mt-1 uppercase">Freshworks</div>
+                                </div>
+                            </div>
+
+                            <ul class="list-disc pl-5 space-y-3 text-slate-700 dark:text-slate-300 marker:text-pink-500 text-base leading-relaxed">
+                                <li>Led 24/7 Network Operations Center (NOC) activities as primary escalation point.</li>
+                                <li>Deployed and managed Infrastructure as Code (IaC) using Terraform for AWS.</li>
+                                <li>Designed and implemented automated workflow solutions using N8n.</li>
+                            </ul>
+
+                            <div class="hidden-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
+                                <ul class="overflow-hidden list-disc pl-5 space-y-3 text-slate-700 dark:text-slate-300 marker:text-pink-500 text-base leading-relaxed pt-0 opacity-0 transition-opacity duration-300 delay-100 border-t border-dashed border-pink-200 dark:border-pink-800/50 mt-0">
+                                    <li class="pt-3">Enhanced system reliability by configuring advanced alerts in CloudWatch/Grafana.</li>
+                                    <li>Collaborated with teams to containerize applications using Docker and Kubernetes.</li>
+                                </ul>
+                            </div>
+
+                            <button class="toggle-btn flex items-center gap-2 mt-6 text-sm font-bold text-pink-600 dark:text-pink-400 hover:text-pink-800 dark:hover:text-pink-200 transition-colors w-full justify-center py-3 rounded-xl hover:bg-pink-100/50 dark:hover:bg-pink-900/30 cursor-pointer group/btn">
+                                <span>Read More</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-y-1"></i>
+                            </button>
+                        </div>
                     </div>
+
+                    <div class="relative pl-12 md:pl-20 group job-item" data-aos="fade-left">
+                        <div class="timeline-dot absolute -left-[7px] top-8 w-4 h-4 rounded-full border-4 border-slate-50 dark:border-slate-800 bg-slate-300 dark:bg-slate-600 group-hover:bg-purple-500 z-20 group-hover:scale-150 transition-all duration-500 shadow-lg"></div>
+                        
+                        <div class="experience-card bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950/50 dark:to-blue-900/50 p-8 rounded-[2rem] border border-purple-100 dark:border-purple-900/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden">
+                            
+                            <div class="absolute top-0 right-0 bg-purple-100 dark:bg-purple-900/50 px-6 py-2 rounded-bl-2xl border-b border-l border-purple-200 dark:border-purple-800">
+                                <span class="font-mono text-xs font-bold text-purple-700 dark:text-purple-300 uppercase tracking-wider">2022 - 2023</span>
+                            </div>
+
+                            <div class="flex items-center gap-5 mb-6 mt-2">
+                                <div class="w-16 h-16 bg-white rounded-2xl p-2 shadow-sm flex items-center justify-center shrink-0 border border-slate-100">
+                                    <img src="assets/img/freshworks.svg" alt="Freshworks" class="w-full h-auto object-contain" onerror="this.parentNode.innerHTML='<span class=\'text-xs font-black text-purple-500\'>FRSH</span>'">
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white">NOC Engineer</h3>
+                                    <div class="text-purple-600 dark:text-purple-400 font-bold tracking-wide text-sm mt-1 uppercase">Freshworks</div>
+                                </div>
+                            </div>
+
+                            <ul class="list-disc pl-5 space-y-3 text-slate-700 dark:text-slate-300 marker:text-purple-500 text-base leading-relaxed">
+                                <li>Monitored server and network infrastructure health using Nagios (99.9% uptime).</li>
+                                <li>Handled L1/L2 incident troubleshooting for Linux-based servers (CentOS).</li>
+                                <li>Documented root cause analysis (RCA) and operational procedures.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-12 md:pl-20 group job-item" data-aos="fade-left">
+                        <div class="timeline-dot absolute -left-[7px] top-8 w-4 h-4 rounded-full border-4 border-slate-50 dark:border-slate-800 bg-slate-300 dark:bg-slate-600 group-hover:bg-emerald-500 z-20 group-hover:scale-150 transition-all duration-500 shadow-lg"></div>
+                        
+                        <div class="experience-card bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-950/50 dark:to-cyan-900/50 p-8 rounded-[2rem] border border-teal-100 dark:border-teal-900/50 transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/10 relative overflow-hidden">
+                            
+                            <div class="absolute top-0 right-0 bg-teal-100 dark:bg-teal-900/50 px-6 py-2 rounded-bl-2xl border-b border-l border-teal-200 dark:border-teal-800">
+                                <span class="font-mono text-xs font-bold text-teal-700 dark:text-teal-300 uppercase tracking-wider">2019 - 2022</span>
+                            </div>
+
+                            <div class="flex items-center gap-5 mb-6 mt-2">
+                                <div class="w-16 h-16 bg-white rounded-2xl p-2 shadow-sm flex items-center justify-center shrink-0 border border-slate-100 overflow-hidden relative">
+                                    <img src="assets/img/cognisive.svg" alt="Cognisive" class="w-full h-full object-contain" onerror="this.parentNode.innerHTML='<span class=\'text-xs font-black text-teal-500\'>COG</span>'">
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Cloud System Engineer</h3>
+                                    <div class="text-teal-600 dark:text-teal-400 font-bold tracking-wide text-sm mt-1 uppercase">Cognisive IT</div>
+                                </div>
+                            </div>
+
+                            <ul class="list-disc pl-5 space-y-3 text-slate-700 dark:text-slate-300 marker:text-teal-500 text-base leading-relaxed">
+                                <li>Managed AWS resources (EC2, VPC, S3) and Identity configurations.</li>
+                                <li>Architected high-availability environments using AWS Auto Scaling & ELB.</li>
+                                <li>Administered VMware vCenter environments, managing VM lifecycles.</li>
+                            </ul>
+
+                             <div class="hidden-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
+                                <ul class="overflow-hidden list-disc pl-5 space-y-3 text-slate-700 dark:text-slate-300 marker:text-teal-500 text-base leading-relaxed pt-0 opacity-0 transition-opacity duration-300 delay-100 border-t border-dashed border-teal-200 dark:border-teal-800/50 mt-0">
+                                    <li class="pt-3">Ensured system availability using LogicMonitor, Opsgenie, and Wavefront.</li>
+                                    <li>Executed monthly patching cycles for Linux and Windows (DEV to PROD).</li>
+                                </ul>
+                            </div>
+
+                            <button class="toggle-btn flex items-center gap-2 mt-6 text-sm font-bold text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-200 transition-colors w-full justify-center py-3 rounded-xl hover:bg-teal-100/50 dark:hover:bg-teal-900/30 cursor-pointer group/btn">
+                                <span>Read More</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-y-1"></i>
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class="experience-card bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950/50 dark:to-blue-900/50 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-purple-100 dark:border-purple-900" data-aos="fade-up" data-aos-delay="200">
-                    <span class="inline-block px-3 py-1 mb-6 text-sm font-bold tracking-wide text-purple-800 bg-purple-200/70 dark:text-purple-200 dark:bg-purple-900/70 rounded-full uppercase">Freshworks</span>
-                    
-                    <h3 class="text-2xl font-black mb-4 text-slate-900 dark:text-white">NOC Engineer</h3>
-                    
-                    <ul class="mb-6 space-y-3 text-slate-700 dark:text-slate-300 leading-relaxed list-disc pl-5 marker:text-purple-500">
-                        <li>Monitored server and network infrastructure health using Nagios (99.9% uptime).</li>
-                        <li>Handled L1/L2 incident troubleshooting for Linux-based servers (CentOS).</li>
-                        <li>Documented root cause analysis (RCA) and operational procedures.</li>
-                    </ul>
-                    
-                    <div class="mt-8 p-6 bg-white/70 dark:bg-black/30 rounded-2xl flex items-center justify-between backdrop-blur-sm">
-                        <img src="assets/img/freshworks.svg" alt="Freshworks" class="h-10 w-auto object-contain" onerror="this.parentNode.innerHTML='<span class=\'text-xl font-black text-purple-800 dark:text-purple-200\'>FRESHWORKS</span>'">
-                        <span class="font-mono text-sm font-bold text-purple-800 dark:text-purple-200">2022 - 2023</span>
-                    </div>
-                </div>
-
-                <div class="experience-card bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-950/50 dark:to-cyan-900/50 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-teal-100 dark:border-teal-900" data-aos="fade-up" data-aos-delay="300">
-                    <span class="inline-block px-3 py-1 mb-6 text-sm font-bold tracking-wide text-teal-800 bg-teal-200/70 dark:text-teal-200 dark:bg-teal-900/70 rounded-full uppercase">Cognisive IT</span>
-                    
-                    <h3 class="text-2xl font-black mb-4 text-slate-900 dark:text-white">Cloud System Engineer</h3>
-                    
-                    <ul class="mb-6 space-y-3 text-slate-700 dark:text-slate-300 leading-relaxed list-disc pl-5 marker:text-teal-500">
-                        <li>Managed AWS resources (EC2, VPC, S3) and Identity configurations.</li>
-                        <li>Architected high-availability environments using AWS Auto Scaling & ELB.</li>
-                        <li>Administered VMware vCenter environments, managing VM lifecycles.</li>
-                    </ul>
-
-                    <div class="hidden-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
-                        <ul class="overflow-hidden space-y-3 text-slate-700 dark:text-slate-300 leading-relaxed list-disc pl-5 marker:text-teal-500 opacity-0 transition-opacity duration-300 delay-100">
-                            <li>Ensured system availability using LogicMonitor, Opsgenie, and Wavefront.</li>
-                            <li>Executed monthly patching cycles for Linux and Windows (DEV to PROD).</li>
-                            <li>Resolved complex load balancing issues and verified VM services.</li>
-                            <li>Delivered daily NetOps reports and managed Confluence documentation.</li>
-                        </ul>
-                    </div>
-
-                    <button class="toggle-btn mt-2 flex items-center text-lg font-bold text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-200 transition-colors group/btn">
-                        Read more
-                        <i data-lucide="chevron-right" class="ml-2 w-5 h-5 transition-transform group-hover/btn:translate-x-1"></i>
-                    </button>
-                    
-                    <div class="mt-8 p-6 bg-white/70 dark:bg-black/30 rounded-2xl flex items-center justify-between backdrop-blur-sm">
-                        <img src="assets/img/cognisive.svg" alt="Cognisive" class="h-10 w-auto object-contain" onerror="this.parentNode.innerHTML='<span class=\'text-xl font-black text-teal-800 dark:text-teal-200\'>COGNISIVE</span>'">
-                        <span class="font-mono text-sm font-bold text-teal-800 dark:text-teal-200">2019 - 2022</span>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-20 border-t border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-[#0f172a] relative z-10">
+    <footer id="contact" class="py-20 border-t border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-[#0b1120] relative z-10">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-black mb-12 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-pink-500">Let's Build Something Great</h2>
             
             <div class="flex flex-wrap justify-center gap-6 mb-12">
                 <a href="https://www.linkedin.com/in/dhivakaran-t/" target="_blank" class="group relative p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-blue-500/20 border border-slate-100 dark:border-white/10 hover:-translate-y-2 transition-all duration-300">
                     <i data-lucide="linkedin" class="w-6 h-6 group-hover:text-[#0077b5] transition-colors"></i>
-                    <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">LinkedIn</span>
                 </a>
                 
                 <a href="https://github.com/Dhiva704" target="_blank" class="group relative p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-slate-500/20 border border-slate-100 dark:border-white/10 hover:-translate-y-2 transition-all duration-300">
                     <i data-lucide="github" class="w-6 h-6 group-hover:text-black dark:group-hover:text-white transition-colors"></i>
-                      <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">GitHub</span>
                 </a>
                 
                 <a href="mailto:devadhiva704@gmail.com" class="group relative p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-red-500/20 border border-slate-100 dark:border-white/10 hover:-translate-y-2 transition-all duration-300">
                     <i data-lucide="mail" class="w-6 h-6 group-hover:text-red-500 transition-colors"></i>
-                      <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Email</span>
                 </a>
                 
                 <a href="https://wa.me/91" target="_blank" class="group relative p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-green-500/20 border border-slate-100 dark:border-white/10 hover:-translate-y-2 transition-all duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:text-[#25D366] transition-colors"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                      <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">WhatsApp</span>
                 </a>
                 
                 <a href="tel:+91" class="group relative p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-emerald-500/20 border border-slate-100 dark:border-white/10 hover:-translate-y-2 transition-all duration-300">
                     <i data-lucide="phone" class="w-6 h-6 group-hover:text-emerald-500 transition-colors"></i>
-                      <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Call Me</span>
                 </a>
             </div>
             <p class="text-slate-500 text-sm font-medium">© <script>document.write(new Date().getFullYear())</script> Dhivakaran T. Crafted with ❤️.</p>
@@ -360,70 +359,6 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
-        // Initialize AOS
-        AOS.init({ duration: 800, once: true, offset: 50 });
-
-        // Dark Mode Logic
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
-
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            html.classList.add('dark');
-        } else {
-            html.classList.remove('dark');
-        }
-
-        themeToggle.addEventListener('click', () => {
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                localStorage.theme = 'light';
-            } else {
-                html.classList.add('dark');
-                localStorage.theme = 'dark';
-            }
-        });
-
-        // --- TOGGLE SHOW MORE/LESS LOGIC FOR NEW CARDS ---
-        document.querySelectorAll('.toggle-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const card = this.closest('.experience-card');
-                const content = card.querySelector('.hidden-content');
-                const icon = this.querySelector('i');
-                const textNode = this.childNodes[0];
-
-                // Toggle Grid Rows to animate height
-                if (content.classList.contains('grid-rows-[0fr]')) {
-                    // Open
-                    content.classList.remove('grid-rows-[0fr]');
-                    content.classList.add('grid-rows-[1fr]');
-                    
-                    // Fade in list items
-                    setTimeout(() => {
-                        content.querySelector('ul').classList.remove('opacity-0');
-                    }, 50);
-
-                    textNode.textContent = 'Show Less ';
-                    icon.setAttribute('data-lucide', 'chevron-up');
-                    icon.classList.remove('group-hover/btn:translate-x-1');
-                } else {
-                    // Close
-                    content.querySelector('ul').classList.add('opacity-0');
-                    content.classList.remove('grid-rows-[1fr]');
-                    content.classList.add('grid-rows-[0fr]');
-                    
-                    textNode.textContent = 'Read more ';
-                    icon.setAttribute('data-lucide', 'chevron-right');
-                    icon.classList.add('group-hover/btn:translate-x-1');
-                }
-                
-                // Re-initialize icons for the changed icon
-                lucide.createIcons();
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
