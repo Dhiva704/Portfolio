@@ -1,52 +1,28 @@
-'use strict';
+// Scroll Reveal Animation
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
 
-// Element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-// Sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// Sidebar toggle functionality for mobile
-if(sidebarBtn) {
-  sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-}
-
-// Page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// Add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
-  });
-}
-
-// Form validation (Visual feedback only)
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-if(form) {
-  for (let i = 0; i < formInputs.length; i++) {
-    formInputs[i].addEventListener("input", function () {
-      if (form.checkValidity()) {
-        formBtn.removeAttribute("disabled");
-      } else {
-        formBtn.setAttribute("disabled", "");
-      }
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
     });
-  }
-}
+}, observerOptions);
+
+document.querySelectorAll('section').forEach(section => {
+    section.classList.add('hidden'); // Add hidden class initially via JS
+    observer.observe(section);
+});
+
+// Add this CSS via JS for the animation to work without cluttering style.css
+const style = document.createElement('style');
+style.innerHTML = `
+    .hidden { opacity: 0; transform: translateY(30px); transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+    .visible { opacity: 1; transform: translateY(0); }
+`;
+document.head.appendChild(style);
