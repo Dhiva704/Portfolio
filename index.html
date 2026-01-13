@@ -124,88 +124,101 @@
         </div>
     </section>
 
-    <section id="experience" class="py-24">
+    <section id="experience" class="py-24 relative">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-3xl font-bold mb-16 text-center" data-aos="fade-up">Professional Experience</h2>
             
-            <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-6 md:ml-12 space-y-12">
+            <div class="relative ml-6 md:ml-12">
                 
-                <div class="relative pl-8 md:pl-12" data-aos="fade-left">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-slate-950"></div>
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-white rounded-lg p-1 shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
-                            <img src="assets/img/comcast.svg" alt="Comcast" class="w-full h-auto object-contain" onerror="this.style.display='none'">
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold">Senior Engineering Operations</h3>
-                            <div class="text-primary font-medium">COMCAST</div>
-                        </div>
-                        <span class="text-sm text-slate-500 sm:ml-auto bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">04/2024 – Present</span>
-                    </div>
-                    <ul class="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400 marker:text-primary">
-                        <li>Ensure broadcast reliability and integrity of Comcast’s Linear Media services.</li>
-                        <li>Lead cross-functional War Room operations during critical outages and oversee Root Cause Analysis (RCA).</li>
-                        <li>Manage large-scale AWS infrastructure ensuring high availability for critical business applications.</li>
-                        <li>Monitor production systems using Opsgenie and Nagios to maintain system uptime.</li>
-                    </ul>
+                <div class="absolute left-0 top-2 bottom-0 w-0.5 bg-slate-200 dark:bg-slate-800"></div>
+
+                <div id="line-progress" class="absolute left-0 top-2 w-0.5 bg-blue-600 z-10" style="height: 0%;">
+                    <div class="absolute -bottom-1.5 -left-[5px] w-3 h-3 rounded-full bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.8)]"></div>
                 </div>
 
-                <div class="relative pl-8 md:pl-12" data-aos="fade-left">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-slate-950"></div>
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-white rounded-lg p-1 shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
-                            <img src="assets/img/freshworks.svg" alt="Freshworks" class="w-full h-auto object-contain" onerror="this.style.display='none'">
+                <div class="space-y-12">
+                
+                    <div class="relative pl-8 md:pl-12 group" data-aos="fade-left">
+                        <div class="absolute -left-[5.5px] top-2 w-3 h-3 rounded-full border-2 border-slate-300 bg-slate-50 dark:border-slate-600 dark:bg-slate-900 z-20 group-hover:border-blue-500 transition-colors"></div>
+                        
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-white rounded-lg p-1 shadow-sm border border-slate-100 flex items-center justify-center shrink-0 z-20 relative">
+                                <img src="assets/img/comcast.png" alt="Comcast" class="w-full h-auto object-contain" onerror="this.style.display='none'">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Senior Engineering Operations</h3>
+                                <div class="text-primary font-medium">COMCAST</div>
+                            </div>
+                            <span class="text-sm text-slate-500 sm:ml-auto bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">04/2024 – Present</span>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-bold">Senior NOC Engineer</h3>
-                            <div class="text-primary font-medium">FRESHWORKS</div>
-                        </div>
-                        <span class="text-sm text-slate-500 sm:ml-auto bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">10/2023 – 04/2024</span>
+                        <ul class="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400 marker:text-primary">
+                            <li>Ensure broadcast reliability and integrity of Comcast’s Linear Media services.</li>
+                            <li>Lead cross-functional War Room operations during critical outages and oversee Root Cause Analysis (RCA).</li>
+                            <li>Manage large-scale AWS infrastructure ensuring high availability for critical business applications.</li>
+                            <li>Monitor production systems using Opsgenie and Nagios to maintain system uptime.</li>
+                        </ul>
                     </div>
-                    <ul class="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400 marker:text-primary">
-                        <li>Led 24/7 NOC activities and acted as the primary escalation point for critical incidents.</li>
-                        <li>Deployed Infrastructure as Code (IaC) using Terraform for AWS provisioning.</li>
-                        <li>Designed automated workflow solutions using N8n to reduce manual intervention.</li>
-                    </ul>
-                </div>
 
-                <div class="relative pl-8 md:pl-12" data-aos="fade-left">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-slate-950"></div>
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-white rounded-lg p-1 shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
-                            <img src="assets/img/freshworks.svg" alt="Freshworks" class="w-full h-auto object-contain" onerror="this.style.display='none'">
+                    <div class="relative pl-8 md:pl-12 group" data-aos="fade-left">
+                        <div class="absolute -left-[5.5px] top-2 w-3 h-3 rounded-full border-2 border-slate-300 bg-slate-50 dark:border-slate-600 dark:bg-slate-900 z-20 group-hover:border-blue-500 transition-colors"></div>
+
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-white rounded-lg p-1 shadow-sm border border-slate-100 flex items-center justify-center shrink-0 z-20 relative">
+                                <img src="assets/img/freshworks.png" alt="Freshworks" class="w-full h-auto object-contain" onerror="this.style.display='none'">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Senior NOC Engineer</h3>
+                                <div class="text-primary font-medium">FRESHWORKS</div>
+                            </div>
+                            <span class="text-sm text-slate-500 sm:ml-auto bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">10/2023 – 04/2024</span>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-bold">NOC Engineer</h3>
-                            <div class="text-primary font-medium">FRESHWORKS</div>
-                        </div>
-                        <span class="text-sm text-slate-500 sm:ml-auto bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">03/2022 – 09/2023</span>
+                        <ul class="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400 marker:text-primary">
+                            <li>Led 24/7 NOC activities and acted as the primary escalation point for critical incidents.</li>
+                            <li>Deployed Infrastructure as Code (IaC) using Terraform for AWS provisioning.</li>
+                            <li>Designed automated workflow solutions using N8n to reduce manual intervention.</li>
+                        </ul>
                     </div>
-                    <ul class="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400 marker:text-primary">
-                        <li>Monitored server health using Nagios, ensuring 99.9% uptime.</li>
-                        <li>Handled L1/L2 incident troubleshooting for Linux-based servers (CentOS).</li>
-                    </ul>
-                </div>
 
-                <div class="relative pl-8 md:pl-12" data-aos="fade-left">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-slate-950"></div>
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-white rounded-lg p-1 shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
-                            <img src="assets/img/cognisive.svg" alt="Cognisive" class="w-full h-auto object-contain" onerror="this.style.display='none'">
+                    <div class="relative pl-8 md:pl-12 group" data-aos="fade-left">
+                        <div class="absolute -left-[5.5px] top-2 w-3 h-3 rounded-full border-2 border-slate-300 bg-slate-50 dark:border-slate-600 dark:bg-slate-900 z-20 group-hover:border-blue-500 transition-colors"></div>
+
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-white rounded-lg p-1 shadow-sm border border-slate-100 flex items-center justify-center shrink-0 z-20 relative">
+                                <img src="assets/img/freshworks.png" alt="Freshworks" class="w-full h-auto object-contain" onerror="this.style.display='none'">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">NOC Engineer</h3>
+                                <div class="text-primary font-medium">FRESHWORKS</div>
+                            </div>
+                            <span class="text-sm text-slate-500 sm:ml-auto bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">03/2022 – 09/2023</span>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-bold">Cloud System Engineer</h3>
-                            <div class="text-primary font-medium">COGNISIVE IT SERVICES</div>
-                        </div>
-                        <span class="text-sm text-slate-500 sm:ml-auto bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">09/2019 – 02/2022</span>
+                        <ul class="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400 marker:text-primary">
+                            <li>Monitored server health using Nagios, ensuring 99.9% uptime.</li>
+                            <li>Handled L1/L2 incident troubleshooting for Linux-based servers (CentOS).</li>
+                        </ul>
                     </div>
-                    <ul class="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400 marker:text-primary">
-                        <li>Managed AWS resources (EC2, VPC, S3) and architected high-availability environments.</li>
-                        <li>Administered VMware vCenter environments and managed VM lifecycles.</li>
-                        <li>Executed monthly patching cycles for Linux and Windows across DEV, TEST, and PROD.</li>
-                    </ul>
-                </div>
 
+                    <div class="relative pl-8 md:pl-12 group" data-aos="fade-left">
+                        <div class="absolute -left-[5.5px] top-2 w-3 h-3 rounded-full border-2 border-slate-300 bg-slate-50 dark:border-slate-600 dark:bg-slate-900 z-20 group-hover:border-blue-500 transition-colors"></div>
+
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-white rounded-lg p-1 shadow-sm border border-slate-100 flex items-center justify-center shrink-0 z-20 relative">
+                                <img src="assets/img/cognisive.png" alt="Cognisive" class="w-full h-auto object-contain" onerror="this.style.display='none'">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Cloud System Engineer</h3>
+                                <div class="text-primary font-medium">COGNISIVE IT SERVICES</div>
+                            </div>
+                            <span class="text-sm text-slate-500 sm:ml-auto bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">09/2019 – 02/2022</span>
+                        </div>
+                        <ul class="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400 marker:text-primary">
+                            <li>Managed AWS resources (EC2, VPC, S3) and architected high-availability environments.</li>
+                            <li>Administered VMware vCenter environments and managed VM lifecycles.</li>
+                            <li>Executed monthly patching cycles for Linux and Windows across DEV, TEST, and PROD.</li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
