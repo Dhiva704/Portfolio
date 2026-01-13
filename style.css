@@ -1,58 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* FANCY SCROLLBAR */
+/* --- CUSTOM SCROLLBAR --- */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: #0f172a;
 }
 ::-webkit-scrollbar-thumb {
-    background: #94a3b8;
-    border-radius: 4px;
-}
-.dark ::-webkit-scrollbar-thumb {
-    background: #334155;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #64748b;
+    background: linear-gradient(180deg, #6366f1, #ec4899);
+    border-radius: 5px;
+    border: 2px solid #0f172a;
 }
 
-/* SMOOTH SCROLL */
+/* --- BASE STYLES --- */
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* PREMIUM GLASS CARD STYLE */
+/* --- GLASS CARD EFFECT --- */
 .glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 .dark .glass-card {
-    background: rgba(15, 23, 42, 0.6);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(30, 41, 59, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* EXPANSION ANIMATION CLASSES */
+/* --- ANIMATION DELAYS --- */
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+/* --- ACCORDION ANIMATION --- */
 .expanded .hidden-content {
     grid-template-rows: 1fr;
 }
 .expanded .hidden-content ul {
     opacity: 1;
+    margin-top: 12px; /* Add margin when expanded */
 }
 .expanded .toggle-btn i {
     transform: rotate(180deg);
-}
-
-/* Utility to ensure text remains sharp on blur */
-* {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
