@@ -1,57 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+// 1. Initialize Icons & Animations
+lucide.createIcons();
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 50,
+    easing: 'ease-out-cubic'
+});
 
-/* --- CUSTOM SCROLLBAR --- */
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #0f172a;
-}
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #6366f1, #ec4899);
-    border-radius: 5px;
-    border: 2px solid #0f172a;
-}
+// 2. Dark Mode Logic
+const themeToggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
 
-/* --- BASE STYLES --- */
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased;
+// Check saved preference
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    html.classList.add('dark');
+} else {
+    html.classList.remove('dark');
 }
 
-/* --- GLASS CARD EFFECT --- */
-.glass-card {
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+themeToggle.addEventListener('click', () => {
+    html.classList.toggle('dark');
+    if (html.classList.contains('dark')) {
+        localStorage.theme = 'dark';
+    } else {
+        localStorage.theme = 'light';
+    }
+});
+
+// 3. Accordion "View Details" Logic
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const card = this.closest('.glass-card');
+        const span = this.querySelector('span');
+        
+        // Toggle State
+        card.classList.toggle('expanded');
+        
+        // Update Button Text
+        if (card.classList.contains('expanded')) {
+            span.textContent = 'Show Less';
+        } else {
+            span.textContent = 'View Details';
+        }
+        
+        // RECALCULATE SCROLL LINE 
+        // We wait 350ms for the animation to finish, then trigger the update
+        setTimeout(() => {
+            updateScrollProgress();
+        }, 350);
+    });
+});
+
+// 4. Point-to-Point Scroll Line Logic
+const trackContainer = document.getElementById('experience-track');
+const staticLine = document.getElementById('static-line');
+const progressBar = document.getElementById('line-progress');
+const dots = document.querySelectorAll('.timeline-dot');
+
+function updateScrollProgress() {
+    if (!trackContainer || !staticLine || !progressBar || dots.length < 2) return;
+
+    const firstDotRect = dots[0].getBoundingClientRect();
+    const lastDotRect = dots[dots.length - 1].getBoundingClientRect();
+    
+    // Calculate offsets relative to the track container
+    const startTop = dots[0].offsetTop + (firstDotRect.height / 2);
+    const endTop = dots[dots.length - 1].offsetTop + (lastDotRect.height / 2);
+    const totalDistance = endTop - startTop;
+
+    // Set Static Line (Gray) to connect exactly start to end
+    staticLine.style.top = `${startTop}px`;
+    staticLine.style.height = `${totalDistance}px`;
+    
+    // Set Dynamic Line (Color) Start Position
+    progressBar.style.top = `${startTop}px`;
+
+    // Calculate Scroll Progress based on Window Center
+    const triggerPoint = window.innerHeight / 2;
+    // How far has the first dot moved past the trigger point?
+    const distFromTop = triggerPoint - firstDotRect.top - (firstDotRect.height / 2);
+
+    // Clamp values
+    let fillHeight = Math.max(0, distFromTop);
+    fillHeight = Math.min(fillHeight, totalDistance);
+
+    // Apply Height
+    progressBar.style.height = `${fillHeight}px`;
 }
 
-.dark .glass-card {
-    background: rgba(30, 41, 59, 0.4);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-}
-
-/* --- ANIMATION DELAYS --- */
-.animation-delay-2000 {
-    animation-delay: 2s;
-}
-.animation-delay-4000 {
-    animation-delay: 4s;
-}
-
-/* --- ACCORDION ANIMATION --- */
-.expanded .hidden-content {
-    grid-template-rows: 1fr;
-}
-.expanded .hidden-content ul {
-    opacity: 1;
-    margin-top: 12px; /* Add margin when expanded */
-}
-.expanded .toggle-btn i {
-    transform: rotate(180deg);
-}
+// Run logic on load, scroll, and resize
+document.addEventListener('DOMContentLoaded', updateScrollProgress);
+window.addEventListener('scroll', updateScrollProgress);
+window.addEventListener('resize', updateScrollProgress);
