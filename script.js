@@ -12,14 +12,12 @@ AOS.init({
 const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 
-// Check Local Storage or System Preference on load
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     html.classList.add('dark');
 } else {
     html.classList.remove('dark');
 }
 
-// Toggle Click Handler
 themeToggle.addEventListener('click', () => {
     if (html.classList.contains('dark')) {
         html.classList.remove('dark');
@@ -30,23 +28,44 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-// SCROLL PROGRESS LINE LOGIC
-window.addEventListener('scroll', () => {
-    const experienceSection = document.getElementById('experience');
+// --- POINT-TO-POINT SCROLL LOGIC ---
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('experience-track');
     const progressBar = document.getElementById('line-progress');
-    
-    if (experienceSection && progressBar) {
-        const sectionTop = experienceSection.offsetTop;
-        const sectionHeight = experienceSection.offsetHeight;
-        const scrollPosition = window.scrollY + window.innerHeight / 2; // Trigger point is center of screen
+    // Get all job items to find the last one
+    const jobItems = document.querySelectorAll('.job-item');
+
+    function updateScrollProgress() {
+        if (!track || !progressBar || jobItems.length === 0) return;
+
+        const trackRect = track.getBoundingClientRect();
+        const lastJob = jobItems[jobItems.length - 1];
+        const lastJobRect = lastJob.getBoundingClientRect();
+
+        // 1. Where do we want the line to stop? 
+        // Exactly at the last dot. The dot is ~8px (0.5rem) from the top of the job item.
+        const maxFillHeight = lastJobRect.top - trackRect.top; // Relative distance to last item
+
+        // 2. Where is the user currently? (Center of screen)
+        const triggerPoint = window.innerHeight / 2;
         
-        // Calculate percentage
-        let progress = ((scrollPosition - sectionTop) / sectionHeight) * 100;
+        // 3. Calculate "Raw" fill (Distance from track top to trigger point)
+        // We subtract 8px (approx) because the track starts at top-2
+        let currentFill = triggerPoint - trackRect.top - 8;
+
+        // 4. Apply Limits
+        // Don't go below 0
+        currentFill = Math.max(0, currentFill);
         
-        // Limit between 0% and 100%
-        progress = Math.max(0, Math.min(progress, 100));
-        
-        // Update height
-        progressBar.style.height = `${progress}%`;
+        // Don't go past the last dot (The Point-to-Point fix)
+        currentFill = Math.min(currentFill, maxFillHeight);
+
+        // Apply height in Pixels, not percentage, for perfect precision
+        progressBar.style.height = `${currentFill}px`;
     }
+
+    // Run on scroll and load
+    window.addEventListener('scroll', updateScrollProgress);
+    window.addEventListener('resize', updateScrollProgress);
+    updateScrollProgress();
 });
