@@ -22,6 +22,7 @@
                     animation: {
                         'blob': 'blob 10s infinite',
                         'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
                         blob: {
@@ -43,7 +44,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .dark ::-webkit-scrollbar-thumb { background: #334155; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Glass Card Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Tech Grid Background Pattern */
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .dark .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+    </style>
 </head>
 
 <body class="bg-slate-50 text-slate-900 dark:bg-[#0b1120] dark:text-slate-100 transition-colors duration-500 selection:bg-indigo-500 selection:text-white overflow-x-hidden">
@@ -108,59 +142,121 @@
                 </a>
             </div>
         </div>
+        
+        <div class="absolute bottom-10 animate-float opacity-50 hidden md:block">
+            <i data-lucide="chevron-down" class="w-10 h-10 text-slate-400"></i>
+        </div>
     </section>
 
-    <section class="py-32 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-black mb-20 text-center bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-500" data-aos="fade-up">Technical Arsenal</h2>
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern opacity-[0.4] pointer-events-none"></div>
+        <div class="absolute top-1/4 left-0 w-[500px] h-[500px] bg-blue-500/20 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-pulse-slow"></div>
+        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-violet-500/20 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-pulse-slow"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <h2 class="text-4xl font-black mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-500" data-aos="fade-up">Technical Arsenal</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-3 transition-all duration-500 group border-t border-white/50 dark:border-white/10" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-500 text-blue-500">
-                        <i data-lucide="cloud" class="w-8 h-8"></i>
+                
+                <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-3 transition-all duration-500 group border-t border-white/50 dark:border-white/10 relative overflow-hidden" data-aos="fade-up" data-aos-delay="0">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1080&auto=format&fit=crop" 
+                         alt="Cloud Background" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-10 dark:opacity-20 transition-transform duration-700 group-hover:scale-110 pointer-events-none grayscale group-hover:grayscale-0">
+                    
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-500 text-blue-500 backdrop-blur-sm">
+                            <i data-lucide="cloud" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-4">Cloud & Infra</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-blue-500/50 shadow-lg"></div>AWS (VPC, EC2)</li>
+                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-blue-500/50 shadow-lg"></div>Terraform</li>
+                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-blue-500/50 shadow-lg"></div>Kubernetes</li>
+                        </ul>
                     </div>
-                    <h3 class="font-bold text-xl mb-4">Cloud & Infra</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-2 text-sm opacity-80"><div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>AWS (VPC, EC2)</li>
-                        <li class="flex items-center gap-2 text-sm opacity-80"><div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>Terraform</li>
-                        <li class="flex items-center gap-2 text-sm opacity-80"><div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>Kubernetes</li>
-                    </ul>
                 </div>
 
-                <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-3 transition-all duration-500 group border-t border-white/50 dark:border-white/10" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-pink-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-500 group-hover:text-white transition-colors duration-500 text-pink-500">
-                        <i data-lucide="activity" class="w-8 h-8"></i>
+                <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-3 transition-all duration-500 group border-t border-white/50 dark:border-white/10 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1080&auto=format&fit=crop" 
+                         alt="Monitoring Background" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-10 dark:opacity-20 transition-transform duration-700 group-hover:scale-110 pointer-events-none grayscale group-hover:grayscale-0">
+
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-pink-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-500 group-hover:text-white transition-colors duration-500 text-pink-500 backdrop-blur-sm">
+                            <i data-lucide="activity" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-4">Observability</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-pink-500/50 shadow-lg"></div>Prometheus</li>
+                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-pink-500/50 shadow-lg"></div>Grafana / Nagios</li>
+                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-pink-500/50 shadow-lg"></div>Opsgenie</li>
+                        </ul>
                     </div>
-                    <h3 class="font-bold text-xl mb-4">Observability</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-2 text-sm opacity-80"><div class="w-1.5 h-1.5 rounded-full bg-pink-500"></div>Prometheus</li>
-                        <li class="flex items-center gap-2 text-sm opacity-80"><div class="w-1.5 h-1.5 rounded-full bg-pink-500"></div>Grafana / Nagios</li>
-                        <li class="flex items-center gap-2 text-sm opacity-80"><div class="w-1.5 h-1.5 rounded-full bg-pink-500"></div>Opsgenie</li>
-                    </ul>
                 </div>
 
-                <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-3 transition-all duration-500 group border-t border-white/50 dark:border-white/10" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-violet-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-violet-500 group-hover:text-white transition-colors duration-500 text-violet-500">
-                        <i data-lucide="terminal" class="w-8 h-8"></i>
+                <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-3 transition-all duration-500 group border-t border-white/50 dark:border-white/10 relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1607799275518-d58665d099db?q=80&w=1080&auto=format&fit=crop" 
+                         alt="DevOps Background" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-10 dark:opacity-20 transition-transform duration-700 group-hover:scale-110 pointer-events-none grayscale group-hover:grayscale-0">
+
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-violet-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-violet-500 group-hover:text-white transition-colors duration-500 text-violet-500 backdrop-blur-sm">
+                            <i data-lucide="terminal" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-4">DevOps</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-violet-500 shadow-violet-500/50 shadow-lg"></div>Jenkins / GitLab</li>
+                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-violet-500 shadow-violet-500/50 shadow-lg"></div>GitHub Actions</li>
+                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-violet-500 shadow-violet-500/50 shadow-lg"></div>Bash Scripting</li>
+                        </ul>
                     </div>
-                    <h3 class="font-bold text-xl mb-4">DevOps</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-2 text-sm opacity-80"><div class="w-1.5 h-1.5 rounded-full bg-violet-500"></div>Jenkins / GitLab</li>
-                        <li class="flex items-center gap-2 text-sm opacity-80"><div class="w-1.5 h-1.5 rounded-full bg-violet-500"></div>GitHub Actions</li>
-                        <li class="flex items-center gap-2 text-sm opacity-80"><div class="w-1.5 h-1.5 rounded-full bg-violet-500"></div>Bash Scripting</li>
-                    </ul>
                 </div>
 
-                <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-3 transition-all duration-500 group border-t border-white/50 dark:border-white/10" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-500 text-emerald-500">
-                        <i data-lucide="workflow" class="w-8 h-8"></i>
+                <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-3 transition-all duration-500 group border-t border-white/50 dark:border-white/10 relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1080&auto=format&fit=crop" 
+                         alt="Automation Background" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-10 dark:opacity-20 transition-transform duration-700 group-hover:scale-110 pointer-events-none grayscale group-hover:grayscale-0">
+
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-500 text-emerald-500 backdrop-blur-sm">
+                            <i data-lucide="workflow" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-4">Automation</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-emerald-500/50 shadow-lg"></div>N8n Workflows</li>
+                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-emerald-500/50 shadow-lg"></div>Incident Response</li>
+                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-emerald-500/50 shadow-lg"></div>Jira & Zendesk</li>
+                        </ul>
                     </div>
-                    <h3 class="font-bold text-xl mb-4">Automation</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-2 text-sm opacity-80"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>N8n Workflows</li>
-                        <li class="flex items-center gap-2 text-sm opacity-80"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>Incident Response</li>
-                        <li class="flex items-center gap-2 text-sm opacity-80"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>Jira & Zendesk</li>
-                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <h2 class="text-3xl font-black mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-yellow-500" data-aos="fade-up">Certifications</h2>
+            
+            <div class="flex justify-center">
+                <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-3 transition-all duration-500 group border-t border-white/50 dark:border-white/10 relative overflow-hidden max-w-sm w-full" data-aos="fade-up">
+                    
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1080&auto=format&fit=crop" 
+                         alt="AWS Cloud Background" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-25 transition-transform duration-700 group-hover:scale-110 pointer-events-none grayscale group-hover:grayscale-0">
+                    
+                    <div class="relative z-10 flex flex-col items-center text-center">
+                        <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-orange-500/20 group-hover:scale-110 transition-transform duration-500">
+                            <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.3419559c682629072f1eb968d59dea0741772c0f.png" alt="AWS SAA Badge" class="w-16 h-16 object-contain">
+                        </div>
+                        
+                        <h3 class="font-bold text-xl mb-2 text-slate-900 dark:text-white">AWS Certified</h3>
+                        <p class="text-sm font-semibold text-orange-500 uppercase tracking-wider mb-4">Solutions Architect - Associate</p>
+                        
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 border border-orange-200 dark:border-orange-800">
+                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                            <span class="text-xs font-medium text-orange-700 dark:text-orange-300">Active Credential</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -359,6 +455,94 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script>
+        // 1. Initialize Libraries
+        lucide.createIcons();
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 50,
+            easing: 'ease-out-cubic'
+        });
+
+        // 2. Dark Mode Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+
+        // 3. Accordion "Read More" Logic
+        document.querySelectorAll('.toggle-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.experience-card');
+                const span = this.querySelector('span');
+                const content = card.querySelector('.hidden-content');
+                
+                if (content.classList.contains('grid-rows-[0fr]')) {
+                    content.classList.remove('grid-rows-[0fr]');
+                    content.classList.add('grid-rows-[1fr]');
+                    
+                    setTimeout(() => {
+                        content.querySelector('ul').classList.remove('opacity-0');
+                    }, 50);
+
+                    span.textContent = 'Show Less';
+                } else {
+                    content.querySelector('ul').classList.add('opacity-0');
+                    content.classList.remove('grid-rows-[1fr]');
+                    content.classList.add('grid-rows-[0fr]');
+                    
+                    span.textContent = 'Read More';
+                }
+                
+                setTimeout(() => {
+                    updateScrollProgress();
+                }, 500);
+            });
+        });
+
+        // 4. Scroll Line Logic (Required for timeline vertical line)
+        const trackContainer = document.getElementById('experience-track');
+        const staticLine = document.getElementById('static-line');
+        const progressBar = document.getElementById('line-progress');
+        const dots = document.querySelectorAll('.timeline-dot');
+
+        function updateScrollProgress() {
+            if (!trackContainer || !staticLine || !progressBar || dots.length < 2) return;
+
+            const firstDotRect = dots[0].getBoundingClientRect();
+            const lastDotRect = dots[dots.length - 1].getBoundingClientRect();
+            
+            const startTop = dots[0].offsetTop + (dots[0].offsetHeight / 2);
+            const endTop = dots[dots.length - 1].offsetTop + (dots[dots.length - 1].offsetHeight / 2);
+            const totalDistance = endTop - startTop;
+
+            staticLine.style.top = `${startTop}px`;
+            staticLine.style.height = `${totalDistance}px`;
+            
+            progressBar.style.top = `${startTop}px`;
+
+            const triggerPoint = window.innerHeight / 2;
+            const distFromTop = triggerPoint - firstDotRect.top - (firstDotRect.height / 2);
+
+            let fillHeight = Math.max(0, distFromTop);
+            fillHeight = Math.min(fillHeight, totalDistance);
+
+            progressBar.style.height = `${fillHeight}px`;
+        }
+
+        document.addEventListener('DOMContentLoaded', updateScrollProgress);
+        window.addEventListener('scroll', updateScrollProgress);
+        window.addEventListener('resize', updateScrollProgress);
+    </script>
 </body>
 </html>
