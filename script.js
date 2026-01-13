@@ -1,16 +1,17 @@
 // 1. Initialize Libraries
 lucide.createIcons();
 AOS.init({
-    duration: 800,
+    duration: 1000,
     once: true,
-    offset: 50
+    offset: 50,
+    easing: 'ease-out-cubic'
 });
 
 // 2. Dark Mode Logic
 const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 
-// Check local storage or system preference
+// Check saved preference
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     html.classList.add('dark');
 } else {
@@ -18,27 +19,19 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
 }
 
 themeToggle.addEventListener('click', () => {
-    if (html.classList.contains('dark')) {
-        html.classList.remove('dark');
-        localStorage.theme = 'light';
-    } else {
-        html.classList.add('dark');
-        localStorage.theme = 'dark';
-    }
+    html.classList.toggle('dark');
+    localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
 });
 
-// 3. Updated "Read More" Logic for New Cards
+// 3. Accordion "Read More" Logic
 document.querySelectorAll('.toggle-btn').forEach(btn => {
     btn.addEventListener('click', function() {
         const card = this.closest('.experience-card');
+        const span = this.querySelector('span');
         const content = card.querySelector('.hidden-content');
-        const icon = this.querySelector('i');
-        // Get the text node (ignoring the icon element)
-        const textNode = this.childNodes[0]; 
-
-        // Toggle Grid Rows to animate height
+        
+        // Toggle animation classes
         if (content.classList.contains('grid-rows-[0fr]')) {
-            // OPEN
             content.classList.remove('grid-rows-[0fr]');
             content.classList.add('grid-rows-[1fr]');
             
@@ -47,25 +40,58 @@ document.querySelectorAll('.toggle-btn').forEach(btn => {
                 content.querySelector('ul').classList.remove('opacity-0');
             }, 50);
 
-            // Update Button UI
-            textNode.textContent = 'Show Less ';
-            icon.setAttribute('data-lucide', 'chevron-up');
-            // Remove the hover translate effect when open
-            icon.classList.remove('group-hover/btn:translate-x-1');
+            span.textContent = 'Show Less';
         } else {
-            // CLOSE
             content.querySelector('ul').classList.add('opacity-0');
             content.classList.remove('grid-rows-[1fr]');
             content.classList.add('grid-rows-[0fr]');
             
-            // Update Button UI
-            textNode.textContent = 'Read more ';
-            icon.setAttribute('data-lucide', 'chevron-right');
-            // Re-add the hover translate effect
-            icon.classList.add('group-hover/btn:translate-x-1');
+            span.textContent = 'Read More';
         }
         
-        // Refresh icons to apply the new chevron-up/down
-        lucide.createIcons();
+        // Recalculate scroll line because the page height changed
+        setTimeout(() => {
+            updateScrollProgress();
+        }, 500);
     });
 });
+
+// 4. Scroll Line Logic (RESTORED)
+const trackContainer = document.getElementById('experience-track');
+const staticLine = document.getElementById('static-line');
+const progressBar = document.getElementById('line-progress');
+const dots = document.querySelectorAll('.timeline-dot');
+
+function updateScrollProgress() {
+    if (!trackContainer || !staticLine || !progressBar || dots.length < 2) return;
+
+    const firstDotRect = dots[0].getBoundingClientRect();
+    const lastDotRect = dots[dots.length - 1].getBoundingClientRect();
+    
+    // Calculate tops relative to the dot's own position
+    const startTop = dots[0].offsetTop + (dots[0].offsetHeight / 2);
+    const endTop = dots[dots.length - 1].offsetTop + (dots[dots.length - 1].offsetHeight / 2);
+    const totalDistance = endTop - startTop;
+
+    // Set Static Line Position
+    staticLine.style.top = `${startTop}px`;
+    staticLine.style.height = `${totalDistance}px`;
+    
+    // Set Progress Bar Start Position
+    progressBar.style.top = `${startTop}px`;
+
+    // Calculate Scroll Progress
+    const triggerPoint = window.innerHeight / 2;
+    const distFromTop = triggerPoint - firstDotRect.top - (firstDotRect.height / 2);
+
+    // Clamp values
+    let fillHeight = Math.max(0, distFromTop);
+    fillHeight = Math.min(fillHeight, totalDistance);
+
+    progressBar.style.height = `${fillHeight}px`;
+}
+
+// Run logic on load, scroll, and resize
+document.addEventListener('DOMContentLoaded', updateScrollProgress);
+window.addEventListener('scroll', updateScrollProgress);
+window.addEventListener('resize', updateScrollProgress);
