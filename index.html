@@ -130,19 +130,20 @@
             
             <div id="experience-track" class="relative ml-6 md:ml-12">
                 
-                <div class="absolute left-0 top-2 bottom-0 w-0.5 bg-slate-200 dark:bg-slate-800"></div>
+                <div id="static-line" class="absolute left-0 w-0.5 bg-slate-200 dark:bg-slate-800"></div>
 
-                <div id="line-progress" class="absolute left-0 top-2 w-0.5 bg-blue-600 z-10" style="height: 0px;">
+                <div id="line-progress" class="absolute left-0 w-0.5 bg-blue-600 z-10" style="height: 0px;">
                     <div class="absolute -bottom-1.5 -left-[5px] w-3 h-3 rounded-full bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.8)]"></div>
                 </div>
 
-                <div class="space-y-12" id="job-list">
+                <div class="space-y-12">
                 
                     <div class="relative pl-8 md:pl-12 group job-item" data-aos="fade-left">
-                        <div class="absolute -left-[5.5px] top-2 w-3 h-3 rounded-full border-2 border-slate-300 bg-slate-50 dark:border-slate-600 dark:bg-slate-900 z-20 group-hover:border-blue-500 transition-colors"></div>
+                        <div class="timeline-dot absolute -left-[5.5px] top-2 w-3 h-3 rounded-full border-2 border-slate-300 bg-slate-50 dark:border-slate-600 dark:bg-slate-900 z-20 group-hover:border-blue-500 transition-colors"></div>
+                        
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
                             <div class="w-12 h-12 bg-white rounded-lg p-1 shadow-sm border border-slate-100 flex items-center justify-center shrink-0 z-20 relative">
-                                <img src="assets/img/comcast.svg" alt="Comcast" class="w-full h-auto object-contain" onerror="this.style.display='none'">
+                                <img src="assets/img/comcast.svg” alt="Comcast" class="w-full h-auto object-contain" onerror="this.style.display='none'">
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold">Senior Engineering Operations</h3>
@@ -151,17 +152,22 @@
                             <span class="text-sm text-slate-500 sm:ml-auto bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">04/2024 – Present</span>
                         </div>
                         <ul class="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400 marker:text-primary">
-                            <li>Ensure broadcast reliability and integrity of Comcast’s Linear Media services.</li>
-                            <li>Lead cross-functional War Room operations during critical outages.</li>
-                            <li>Manage large-scale AWS infrastructure ensuring high availability.</li>
+                                                        <li>Ensure broadcast reliability, integrity, and availability of Comcast’s Linear Media services and national distribution platforms.</li>
+                            <li>Lead cross-functional war room operations during critical outages, overseeing Root Cause Analysis (RCA) andcoordinating with engineering, NOC, and executive stakeholders.</li>
+                            <li>Manage and optimize large-scale AWS cloud infrastructure, ensuring high availability and security for criticalbusiness applications.</li>
+                            <li>Monitor production systems using Opsgenie and Nagios, actively identifying anomalies to maintain broadcast quality and system uptime.</li>
+                            <li>Orchestrate incident lifecycle management using Zendesk and Jira, ensuring strict adherence to SLAs and compliance requirements.</li>
+                            <li>Collaborate with cross-functional teams to maintain CI/CD pipelines (Jenkins/GitLab), ensuring seamless deployment of updates.</li>
+                            <li>Train junior engineers on incident management best practices and broadcast operations, fostering a high-performance culture.</li>
+                            <li>Develop and maintain Standard Operating Procedures (SOPs) and runbooks to standardize operational workflows.</li>
                         </ul>
                     </div>
 
                     <div class="relative pl-8 md:pl-12 group job-item" data-aos="fade-left">
-                        <div class="absolute -left-[5.5px] top-2 w-3 h-3 rounded-full border-2 border-slate-300 bg-slate-50 dark:border-slate-600 dark:bg-slate-900 z-20 group-hover:border-blue-500 transition-colors"></div>
+                        <div class="timeline-dot absolute -left-[5.5px] top-2 w-3 h-3 rounded-full border-2 border-slate-300 bg-slate-50 dark:border-slate-600 dark:bg-slate-900 z-20 group-hover:border-blue-500 transition-colors"></div>
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
                             <div class="w-12 h-12 bg-white rounded-lg p-1 shadow-sm border border-slate-100 flex items-center justify-center shrink-0 z-20 relative">
-                                <img src="assets/img/freshworks.svg" alt="Freshworks" class="w-full h-auto object-contain" onerror="this.style.display='none'">
+                                <img src="assets/img/freshworks.svg” alt="Freshworks" class="w-full h-auto object-contain" onerror="this.style.display='none'">
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold">Senior NOC Engineer</h3>
@@ -170,17 +176,21 @@
                             <span class="text-sm text-slate-500 sm:ml-auto bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">10/2023 – 04/2024</span>
                         </div>
                         <ul class="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400 marker:text-primary">
-                            <li>Led 24/7 NOC activities and acted as the primary escalation point.</li>
-                            <li>Deployed Infrastructure as Code (IaC) using Terraform.</li>
-                            <li>Designed automated workflow solutions using N8n.</li>
+                             <li>Ensure broadcast reliability, integrity, and availability of Comcast’s Linear Media services and national distribution platforms.</li>
+                            <li>Led 24/7 Network Operations Center (NOC) activities, serving as the primary escalation point for critical infrastructure incidents.</li>
+                            <li>Deployed and managed Infrastructure as Code (IaC) using Terraform to provision AWS resources (EC2, VPC, S3) reliably.</li>
+                            <li>Designed and implemented automated workflow solutions using N8n to streamline operational tasks and reduce manual intervention.</li>
+                            <li>Enhanced system reliability by configuring advanced alerts and dashboards in CloudWatch and Grafana.</li>
+                            <li>Collaborated with development teams to containerize applications using Docker and orchestrate them via Kubernetes.</li>
+                            <li>Implemented security best practices within AWS IAM and security groups to ensure data integrity and compliance.</li>
                         </ul>
                     </div>
 
                     <div class="relative pl-8 md:pl-12 group job-item" data-aos="fade-left">
-                        <div class="absolute -left-[5.5px] top-2 w-3 h-3 rounded-full border-2 border-slate-300 bg-slate-50 dark:border-slate-600 dark:bg-slate-900 z-20 group-hover:border-blue-500 transition-colors"></div>
+                        <div class="timeline-dot absolute -left-[5.5px] top-2 w-3 h-3 rounded-full border-2 border-slate-300 bg-slate-50 dark:border-slate-600 dark:bg-slate-900 z-20 group-hover:border-blue-500 transition-colors"></div>
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
                             <div class="w-12 h-12 bg-white rounded-lg p-1 shadow-sm border border-slate-100 flex items-center justify-center shrink-0 z-20 relative">
-                                <img src="assets/img/freshworks.svg" alt="Freshworks" class="w-full h-auto object-contain" onerror="this.style.display='none'">
+                                <img src="assets/img/freshworks.svg” alt="Freshworks" class="w-full h-auto object-contain" onerror="this.style.display='none'">
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold">NOC Engineer</h3>
@@ -189,16 +199,17 @@
                             <span class="text-sm text-slate-500 sm:ml-auto bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">03/2022 – 09/2023</span>
                         </div>
                         <ul class="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400 marker:text-primary">
-                            <li>Monitored server health using Nagios, ensuring 99.9% uptime.</li>
-                            <li>Handled L1/L2 incident troubleshooting for Linux-based servers.</li>
+                             <li>Monitored server and network infrastructure health using Nagios, ensuring 99.9% uptime adherence.</li>
+                            <li>Handled L1/L2 incident troubleshooting for Linux-based servers (Centos) and escalated complex issues to appropriate engineering teams.</li>
+                            <li>Documented root cause analysis (RCA) and operational procedures to build a comprehensive knowledge base.</li>
                         </ul>
                     </div>
 
                     <div class="relative pl-8 md:pl-12 group job-item" data-aos="fade-left">
-                        <div class="absolute -left-[5.5px] top-2 w-3 h-3 rounded-full border-2 border-slate-300 bg-slate-50 dark:border-slate-600 dark:bg-slate-900 z-20 group-hover:border-blue-500 transition-colors"></div>
+                        <div class="timeline-dot absolute -left-[5.5px] top-2 w-3 h-3 rounded-full border-2 border-slate-300 bg-slate-50 dark:border-slate-600 dark:bg-slate-900 z-20 group-hover:border-blue-500 transition-colors"></div>
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
                             <div class="w-12 h-12 bg-white rounded-lg p-1 shadow-sm border border-slate-100 flex items-center justify-center shrink-0 z-20 relative">
-                                <img src="assets/img/cognisive.svg" alt="Cognisive" class="w-full h-auto object-contain" onerror="this.style.display='none'">
+                                <img src="assets/img/cognisive.svg” alt="Cognisive" class="w-full h-auto object-contain" onerror="this.style.display='none'">
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold">Cloud System Engineer</h3>
@@ -207,8 +218,13 @@
                             <span class="text-sm text-slate-500 sm:ml-auto bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">09/2019 – 02/2022</span>
                         </div>
                         <ul class="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400 marker:text-primary">
-                            <li>Managed AWS resources (EC2, VPC, S3).</li>
-                            <li>Administered VMware vCenter environments.</li>
+                             <li>Managed AWS resources including EC2, VPC, S3, and AMI, overseeing Compute, Network, Storage, and Identity configurations.</li>
+                            <li>Architected high-availability environments using AWS Auto Scaling and Elastic Load Balancing (ELB)</li>
+                            <li>Administered VMware vCenter environments, managing virtual machine lifecycles and resource allocation.</li> 
+                            <li>Ensured system availability and event handling using monitoring tools such as LogicMonitor, Opsgenie, and Wavefront.</li>
+                            <li>Executed monthly patching cycles for both Linux and Windows environments across DEV, TEST, PREPROD, and PROD servers.</li>
+                            <li>Resolved complex load balancing issues and verified VM server services during deployments.</li>
+                            <li>Delivered daily NetOps Stand-up reports and managed documentation via Atlassian Confluence.</li>
                         </ul>
                     </div>
 
