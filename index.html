@@ -6,17 +6,17 @@
     <title>Dhivakaran T | Senior Engineering Operations</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        primary: '#6366f1',
-                        secondary: '#ec4899',
-                        dark: '#0f172a',
-                        darker: '#020617',
+                        primary: '#6366f1', // Indigo
+                        secondary: '#ec4899', // Pink
+                        dark: '#0f172a',    // Slate 900
+                        darker: '#020617',  // Slate 950
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -52,81 +52,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <style>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <style>
-        /* Global Noise Texture for Premium Feel */
-        .bg-noise {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 50;
-            opacity: 0.03;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
-        }
-        .dark .bg-noise { opacity: 0.05; }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-        .dark ::-webkit-scrollbar-thumb { background: #334155; }
-        ::-webkit-scrollbar-thumb:hover { background: #6366f1; }
-
-        /* Advanced Glass Effect */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.65);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-        }
-        .dark .glass-card {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-        }
-
-        /* Holographic Card Effect for Certifications */
-        .holo-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.18);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            transition: all 0.5s ease;
-        }
-        .holo-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 15px 40px 0 rgba(99, 102, 241, 0.2);
-            border-color: rgba(99, 102, 241, 0.3);
-        }
-
-        /* Tech Grid Background Pattern */
-        .bg-grid-pattern {
-            background-image: linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-        }
-        .dark .bg-grid-pattern {
-            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-        }
-
-        /* Typing effect cursor */
-        .typing-cursor::after {
-            content: '|';
-            animation: blink 1s step-end infinite;
-        }
-        @keyframes blink { 50% { opacity: 0; } }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-slate-50 text-slate-900 dark:bg-darker dark:text-slate-100 transition-colors duration-500 selection:bg-indigo-500 selection:text-white overflow-x-hidden font-sans">
@@ -162,7 +89,6 @@
         <div class="absolute -bottom-32 left-1/2 w-96 h-96 bg-pink-500/40 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob animation-delay-4000 dark:mix-blend-screen dark:opacity-10"></div>
 
         <div class="max-w-5xl mx-auto px-6 text-center z-10" data-aos="zoom-y-out" data-aos-duration="1000">
-            
             <div class="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10 backdrop-blur-md shadow-xl hover:scale-105 transition-transform cursor-default">
                 <span class="relative flex h-2.5 w-2.5">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -214,12 +140,9 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
                 <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="0">
                     <div class="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1080&auto=format&fit=crop" 
-                         alt="Cloud" 
-                         class="absolute inset-0 w-full h-full object-cover opacity-[0.03] dark:opacity-[0.1] transition-transform duration-700 group-hover:scale-110 pointer-events-none">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1080&auto=format&fit=crop" alt="Cloud" class="absolute inset-0 w-full h-full object-cover opacity-[0.03] dark:opacity-[0.1] transition-transform duration-700 group-hover:scale-110 pointer-events-none">
                     
                     <div class="relative z-10">
                         <div class="w-14 h-14 bg-blue-100 dark:bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-lg shadow-blue-500/10">
@@ -227,24 +150,16 @@
                         </div>
                         <h3 class="font-bold text-xl mb-4 text-slate-800 dark:text-white">Cloud & Infra</h3>
                         <ul class="space-y-3">
-                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">
-                                <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>AWS (VPC, EC2)
-                            </li>
-                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">
-                                <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>Terraform
-                            </li>
-                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">
-                                <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>Kubernetes
-                            </li>
+                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-lg"></span>AWS (VPC, EC2)</li>
+                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-lg"></span>Terraform</li>
+                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-lg"></span>Kubernetes</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
                     <div class="absolute inset-0 bg-gradient-to-b from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1080&auto=format&fit=crop" 
-                         alt="Monitoring" 
-                         class="absolute inset-0 w-full h-full object-cover opacity-[0.03] dark:opacity-[0.1] transition-transform duration-700 group-hover:scale-110 pointer-events-none">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1080&auto=format&fit=crop" alt="Monitoring" class="absolute inset-0 w-full h-full object-cover opacity-[0.03] dark:opacity-[0.1] transition-transform duration-700 group-hover:scale-110 pointer-events-none">
 
                     <div class="relative z-10">
                         <div class="w-14 h-14 bg-pink-100 dark:bg-pink-500/20 rounded-2xl flex items-center justify-center mb-6 text-pink-600 dark:text-pink-400 group-hover:bg-pink-600 group-hover:text-white transition-all duration-500 shadow-lg shadow-pink-500/10">
@@ -252,25 +167,16 @@
                         </div>
                         <h3 class="font-bold text-xl mb-4 text-slate-800 dark:text-white">Observability</h3>
                         <ul class="space-y-3">
-                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">
-                                <span class="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_8px_rgba(236,72,153,0.8)]"></span>Prometheus
-                            </li>
-                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">
-                                <span class="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_8px_rgba(236,72,153,0.8)]"></span>Grafana
-                            </li>
-                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">
-                                <span class="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_8px_rgba(236,72,153,0.8)]"></span>Opsgenie
-                            </li>
+                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-lg"></span>Prometheus</li>
+                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-lg"></span>Grafana</li>
+                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-lg"></span>Opsgenie</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden border-violet-500/20" data-aos="fade-up" data-aos-delay="200">
                     <div class="absolute inset-0 bg-gradient-to-b from-violet-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1080&auto=format&fit=crop" 
-                         alt="Terminal" 
-                         class="absolute inset-0 w-full h-full object-cover opacity-10 dark:opacity-25 transition-transform duration-700 group-hover:scale-105 pointer-events-none mix-blend-overlay">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1080&auto=format&fit=crop" alt="Terminal" class="absolute inset-0 w-full h-full object-cover opacity-10 dark:opacity-25 transition-transform duration-700 group-hover:scale-105 pointer-events-none mix-blend-overlay">
                     
                     <div class="relative z-10">
                         <div class="w-14 h-14 bg-violet-100 dark:bg-violet-500/20 rounded-2xl flex items-center justify-center mb-6 text-violet-600 dark:text-violet-400 group-hover:bg-violet-600 group-hover:text-white transition-all duration-500 shadow-lg shadow-violet-500/10">
@@ -278,24 +184,16 @@
                         </div>
                         <h3 class="font-bold text-xl mb-4 text-slate-800 dark:text-white font-mono">DevOps</h3>
                         <ul class="space-y-3 font-mono text-xs">
-                            <li class="flex items-center gap-3 text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">
-                                <span class="text-violet-500 font-bold">></span class="typing-cursor">Jenkins / GitLab
-                            </li>
-                            <li class="flex items-center gap-3 text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">
-                                <span class="text-violet-500 font-bold">></span>GitHub Actions
-                            </li>
-                            <li class="flex items-center gap-3 text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">
-                                <span class="text-violet-500 font-bold">></span>Bash Scripting
-                            </li>
+                            <li class="flex items-center gap-3 text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors"><span class="text-violet-500 font-bold">></span><span class="typing-cursor">Jenkins / GitLab</span></li>
+                            <li class="flex items-center gap-3 text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors"><span class="text-violet-500 font-bold">></span>GitHub Actions</li>
+                            <li class="flex items-center gap-3 text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors"><span class="text-violet-500 font-bold">></span>Bash Scripting</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
                     <div class="absolute inset-0 bg-gradient-to-b from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1080&auto=format&fit=crop" 
-                         alt="Automation" 
-                         class="absolute inset-0 w-full h-full object-cover opacity-[0.03] dark:opacity-[0.1] transition-transform duration-700 group-hover:scale-110 pointer-events-none">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1080&auto=format&fit=crop" alt="Automation" class="absolute inset-0 w-full h-full object-cover opacity-[0.03] dark:opacity-[0.1] transition-transform duration-700 group-hover:scale-110 pointer-events-none">
 
                     <div class="relative z-10">
                         <div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-500/20 rounded-2xl flex items-center justify-center mb-6 text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-lg shadow-emerald-500/10">
@@ -303,15 +201,9 @@
                         </div>
                         <h3 class="font-bold text-xl mb-4 text-slate-800 dark:text-white">Automation</h3>
                         <ul class="space-y-3">
-                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">
-                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>N8n Workflows
-                            </li>
-                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">
-                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>Incident Response
-                            </li>
-                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">
-                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>Jira & Zendesk
-                            </li>
+                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-lg"></span>N8n Workflows</li>
+                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-lg"></span>Incident Response</li>
+                            <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-lg"></span>Jira & Zendesk</li>
                         </ul>
                     </div>
                 </div>
@@ -333,16 +225,12 @@
                 </div>
 
                 <div class="space-y-16">
-                
                     <div class="relative pl-12 md:pl-20 group job-item" data-aos="fade-left">
-                        <div class="timeline-dot absolute -left-[7px] top-8 w-4 h-4 rounded-full border-4 border-slate-50 dark:border-slate-900 bg-indigo-500 z-20 group-hover:scale-150 transition-all duration-500 shadow-[0_0_10px_rgba(99,102,241,0.5)]"></div>
-                        
+                        <div class="timeline-dot absolute -left-[7px] top-8 w-4 h-4 rounded-full border-4 border-slate-50 dark:border-slate-900 bg-indigo-500 z-20 group-hover:scale-150 transition-all duration-500 shadow-md"></div>
                         <div class="experience-card glass-card p-8 rounded-[2rem] hover:border-indigo-500/30 transition-all duration-500 relative overflow-hidden group-hover:shadow-2xl group-hover:shadow-indigo-500/10">
-                            
                             <div class="absolute top-0 right-0 bg-indigo-50 dark:bg-indigo-900/30 px-5 py-2 rounded-bl-2xl border-b border-l border-indigo-100 dark:border-indigo-800/50">
                                 <span class="font-mono text-xs font-bold text-indigo-600 dark:text-indigo-300 uppercase tracking-wider">Present</span>
                             </div>
-
                             <div class="flex items-center gap-5 mb-6 mt-2">
                                 <div class="w-16 h-16 bg-white rounded-2xl p-2 shadow-sm flex items-center justify-center shrink-0 border border-slate-100 dark:border-white/5">
                                     <img src="assets/img/comcast.svg" alt="Comcast" class="w-full h-auto object-contain" onerror="this.parentNode.innerHTML='<span class=\'text-xs font-black text-indigo-800\'>CMCSA</span>'">
@@ -352,37 +240,29 @@
                                     <div class="text-slate-500 dark:text-slate-400 font-medium text-sm mt-1">Comcast</div>
                                 </div>
                             </div>
-
                             <ul class="list-none space-y-3 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
                                 <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>Ensure broadcast reliability and 99.99% availability for linear media services.</li>
                                 <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>Lead War Rooms and RCA for critical outages with executive stakeholders.</li>
                                 <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>Manage large-scale AWS infrastructure ensuring high security and uptime.</li>
                             </ul>
-
                             <div class="hidden-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
                                 <ul class="overflow-hidden list-none space-y-3 text-slate-600 dark:text-slate-300 text-base leading-relaxed pt-0 opacity-0 transition-opacity duration-300 delay-100 border-t border-dashed border-slate-200 dark:border-white/10 mt-0">
                                     <li class="pt-3 flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>Monitor production via Opsgenie/Nagios to preemptively identify anomalies.</li>
                                     <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>Orchestrate incident lifecycles via Zendesk/Jira adhering to strict SLAs.</li>
-                                    <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>Maintain CI/CD pipelines (Jenkins/GitLab) and train junior engineers.</li>
                                 </ul>
                             </div>
-
                             <button class="toggle-btn flex items-center gap-2 mt-6 text-xs font-bold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase w-full justify-center py-3 rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-900/20 cursor-pointer transition-colors">
-                                <span>Read More</span>
-                                <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                                <span>Read More</span><i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
                             </button>
                         </div>
                     </div>
 
                     <div class="relative pl-12 md:pl-20 group job-item" data-aos="fade-left">
                         <div class="timeline-dot absolute -left-[7px] top-8 w-4 h-4 rounded-full border-4 border-slate-50 dark:border-slate-900 bg-slate-300 dark:bg-slate-700 group-hover:bg-pink-500 z-20 group-hover:scale-150 transition-all duration-500 shadow-md"></div>
-                        
                         <div class="experience-card glass-card p-8 rounded-[2rem] hover:border-pink-500/30 transition-all duration-500 relative overflow-hidden group-hover:shadow-2xl group-hover:shadow-pink-500/10">
-                            
                             <div class="absolute top-0 right-0 bg-pink-50 dark:bg-pink-900/30 px-5 py-2 rounded-bl-2xl border-b border-l border-pink-100 dark:border-pink-800/50">
                                 <span class="font-mono text-xs font-bold text-pink-600 dark:text-pink-300 uppercase tracking-wider">2023 - 2024</span>
                             </div>
-
                             <div class="flex items-center gap-5 mb-6 mt-2">
                                 <div class="w-16 h-16 bg-white rounded-2xl p-2 shadow-sm flex items-center justify-center shrink-0 border border-slate-100 dark:border-white/5">
                                     <img src="assets/img/freshworks.svg" alt="Freshworks" class="w-full h-auto object-contain" onerror="this.parentNode.innerHTML='<span class=\'text-xs font-black text-pink-500\'>FRSH</span>'">
@@ -392,36 +272,27 @@
                                     <div class="text-slate-500 dark:text-slate-400 font-medium text-sm mt-1">Freshworks</div>
                                 </div>
                             </div>
-
                             <ul class="list-none space-y-3 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
                                 <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-pink-500 flex-shrink-0"></span>Primary escalation point for critical 24/7 NOC operations.</li>
-                                <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-pink-500 flex-shrink-0"></span>Managed IaC via Terraform for reliable AWS provisioning (EC2, VPC).</li>
-                                <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-pink-500 flex-shrink-0"></span>Automated workflow solutions using N8n to reduce manual toil.</li>
+                                <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-pink-500 flex-shrink-0"></span>Managed IaC via Terraform for reliable AWS provisioning.</li>
                             </ul>
-
+                            <button class="toggle-btn flex items-center gap-2 mt-6 text-xs font-bold tracking-widest text-pink-600 dark:text-pink-400 uppercase w-full justify-center py-3 rounded-xl hover:bg-pink-50 dark:hover:bg-pink-900/20 cursor-pointer transition-colors">
+                                <span>Read More</span><i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                            </button>
                             <div class="hidden-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
                                 <ul class="overflow-hidden list-none space-y-3 text-slate-600 dark:text-slate-300 text-base leading-relaxed pt-0 opacity-0 transition-opacity duration-300 delay-100 border-t border-dashed border-slate-200 dark:border-white/10 mt-0">
                                     <li class="pt-3 flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-pink-500 flex-shrink-0"></span>Configured advanced dashboards in CloudWatch and Grafana.</li>
-                                    <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-pink-500 flex-shrink-0"></span>Containerized apps with Docker/Kubernetes and enforced AWS IAM security.</li>
                                 </ul>
                             </div>
-
-                            <button class="toggle-btn flex items-center gap-2 mt-6 text-xs font-bold tracking-widest text-pink-600 dark:text-pink-400 uppercase w-full justify-center py-3 rounded-xl hover:bg-pink-50 dark:hover:bg-pink-900/20 cursor-pointer transition-colors">
-                                <span>Read More</span>
-                                <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
-                            </button>
                         </div>
                     </div>
 
                     <div class="relative pl-12 md:pl-20 group job-item" data-aos="fade-left">
                         <div class="timeline-dot absolute -left-[7px] top-8 w-4 h-4 rounded-full border-4 border-slate-50 dark:border-slate-900 bg-slate-300 dark:bg-slate-700 group-hover:bg-purple-500 z-20 group-hover:scale-150 transition-all duration-500 shadow-md"></div>
-                        
                         <div class="experience-card glass-card p-8 rounded-[2rem] hover:border-purple-500/30 transition-all duration-500 relative overflow-hidden group-hover:shadow-2xl group-hover:shadow-purple-500/10">
-                            
                             <div class="absolute top-0 right-0 bg-purple-50 dark:bg-purple-900/30 px-5 py-2 rounded-bl-2xl border-b border-l border-purple-100 dark:border-purple-800/50">
                                 <span class="font-mono text-xs font-bold text-purple-600 dark:text-purple-300 uppercase tracking-wider">2022 - 2023</span>
                             </div>
-
                             <div class="flex items-center gap-5 mb-6 mt-2">
                                 <div class="w-16 h-16 bg-white rounded-2xl p-2 shadow-sm flex items-center justify-center shrink-0 border border-slate-100 dark:border-white/5">
                                     <img src="assets/img/freshworks.svg" alt="Freshworks" class="w-full h-auto object-contain" onerror="this.parentNode.innerHTML='<span class=\'text-xs font-black text-purple-500\'>FRSH</span>'">
@@ -431,7 +302,6 @@
                                     <div class="text-slate-500 dark:text-slate-400 font-medium text-sm mt-1">Freshworks</div>
                                 </div>
                             </div>
-
                             <ul class="list-none space-y-3 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
                                 <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 flex-shrink-0"></span>Monitored server health using Nagios, adhering to 99.9% uptime.</li>
                                 <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 flex-shrink-0"></span>L1/L2 troubleshooting for Linux (CentOS) servers.</li>
@@ -441,13 +311,10 @@
 
                     <div class="relative pl-12 md:pl-20 group job-item" data-aos="fade-left">
                         <div class="timeline-dot absolute -left-[7px] top-8 w-4 h-4 rounded-full border-4 border-slate-50 dark:border-slate-900 bg-slate-300 dark:bg-slate-700 group-hover:bg-emerald-500 z-20 group-hover:scale-150 transition-all duration-500 shadow-md"></div>
-                        
                         <div class="experience-card glass-card p-8 rounded-[2rem] hover:border-emerald-500/30 transition-all duration-500 relative overflow-hidden group-hover:shadow-2xl group-hover:shadow-emerald-500/10">
-                            
                             <div class="absolute top-0 right-0 bg-emerald-50 dark:bg-emerald-900/30 px-5 py-2 rounded-bl-2xl border-b border-l border-emerald-100 dark:border-emerald-800/50">
                                 <span class="font-mono text-xs font-bold text-emerald-600 dark:text-emerald-300 uppercase tracking-wider">2019 - 2022</span>
                             </div>
-
                             <div class="flex items-center gap-5 mb-6 mt-2">
                                 <div class="w-16 h-16 bg-white rounded-2xl p-2 shadow-sm flex items-center justify-center shrink-0 border border-slate-100 dark:border-white/5">
                                     <span class="text-xs font-black text-emerald-500">COG</span>
@@ -457,26 +324,20 @@
                                     <div class="text-slate-500 dark:text-slate-400 font-medium text-sm mt-1">Cognisive IT</div>
                                 </div>
                             </div>
-
                             <ul class="list-none space-y-3 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
                                 <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0"></span>Managed AWS EC2, VPC, S3, AMI configurations.</li>
                                 <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0"></span>Architected HA environments with Auto Scaling and ELB.</li>
                             </ul>
-                            
                             <button class="toggle-btn flex items-center gap-2 mt-6 text-xs font-bold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase w-full justify-center py-3 rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-900/20 cursor-pointer transition-colors">
-                                <span>Read More</span>
-                                <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                                <span>Read More</span><i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
                             </button>
-                            
                             <div class="hidden-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
                                 <ul class="overflow-hidden list-none space-y-3 text-slate-600 dark:text-slate-300 text-base leading-relaxed pt-0 opacity-0 transition-opacity duration-300 delay-100 border-t border-dashed border-slate-200 dark:border-white/10 mt-0">
                                      <li class="pt-3 flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0"></span>Administered VMware vCenter and VM lifecycles.</li>
-                                     <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0"></span>Executed monthly patching cycles for Linux/Windows.</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -484,39 +345,28 @@
 
     <section class="py-20 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center">
-            
             <h2 class="text-3xl font-black mb-16 text-center text-slate-900 dark:text-white" data-aos="fade-up">Certifications</h2>
             
             <div class="holo-card relative rounded-3xl p-1 max-w-lg w-full" data-aos="flip-up">
-                
                 <div class="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 rounded-3xl blur-xl opacity-50 dark:opacity-30"></div>
-                
                 <div class="relative bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-[1.3rem] p-6 md:p-8 flex items-center gap-6 overflow-hidden">
-                    
                     <div class="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-[shimmer_3s_infinite]"></div>
-
                     <div class="shrink-0 w-20 h-20 md:w-24 md:h-24 relative z-10 drop-shadow-lg">
-                         <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.3419559c682629072f1eb968d59dea0741772c0f.png" 
-                              alt="AWS SAA Badge" 
-                              class="w-full h-full object-contain filter drop-shadow-[0_0_10px_rgba(255,153,0,0.3)]">
+                         <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.3419559c682629072f1eb968d59dea0741772c0f.png" alt="AWS SAA Badge" class="w-full h-full object-contain filter drop-shadow-[0_0_10px_rgba(255,153,0,0.3)]">
                     </div>
-
                     <div class="flex-1 relative z-10">
                         <h3 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight mb-2">AWS Certified</h3>
                         <p class="text-sm md:text-base font-medium text-slate-600 dark:text-slate-300 mb-1">Solutions Architect - Associate</p>
-                        
                         <div class="flex items-center gap-2 mt-3">
                             <div class="h-px w-8 bg-slate-300 dark:bg-slate-600"></div>
                             <span class="text-xs font-mono font-semibold text-orange-500 uppercase tracking-widest">Valid: 2024 - 2027</span>
                         </div>
                     </div>
-
                     <div class="absolute -right-6 -bottom-6 text-slate-100 dark:text-white/5 opacity-50 dark:opacity-100 rotate-12">
                          <i data-lucide="award" class="w-32 h-32"></i>
                     </div>
                 </div>
             </div>
-            
         </div>
     </section>
 
@@ -528,15 +378,12 @@
                 <a href="https://www.linkedin.com/in/dhivakaran-t/" target="_blank" class="group p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-blue-500/20 border border-slate-100 dark:border-white/5 hover:-translate-y-2 transition-all duration-300">
                     <i data-lucide="linkedin" class="w-6 h-6 group-hover:text-[#0077b5] transition-colors"></i>
                 </a>
-                
                 <a href="https://github.com/Dhiva704" target="_blank" class="group p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-slate-500/20 border border-slate-100 dark:border-white/5 hover:-translate-y-2 transition-all duration-300">
                     <i data-lucide="github" class="w-6 h-6 group-hover:text-black dark:group-hover:text-white transition-colors"></i>
                 </a>
-                
                 <a href="mailto:devadhiva704@gmail.com" class="group p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-red-500/20 border border-slate-100 dark:border-white/5 hover:-translate-y-2 transition-all duration-300">
                     <i data-lucide="mail" class="w-6 h-6 group-hover:text-red-500 transition-colors"></i>
                 </a>
-                
                 <a href="https://wa.me/91" target="_blank" class="group p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-green-500/20 border border-slate-100 dark:border-white/5 hover:-translate-y-2 transition-all duration-300">
                     <i data-lucide="phone" class="w-6 h-6 group-hover:text-[#25D366] transition-colors"></i>
                 </a>
@@ -546,106 +393,6 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize Libraries
-        lucide.createIcons();
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 50,
-            easing: 'ease-out-cubic'
-        });
-
-        // Dark Mode Logic
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
-
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            html.classList.add('dark');
-        } else {
-            html.classList.remove('dark');
-        }
-
-        themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
-        });
-
-        // Accordion Logic
-        document.querySelectorAll('.toggle-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const card = this.closest('.experience-card');
-                const span = this.querySelector('span');
-                const icon = this.querySelector('i');
-                const content = card.querySelector('.hidden-content');
-                
-                if (content.classList.contains('grid-rows-[0fr]')) {
-                    content.classList.remove('grid-rows-[0fr]');
-                    content.classList.add('grid-rows-[1fr]');
-                    icon.classList.add('rotate-180');
-                    
-                    setTimeout(() => {
-                        content.querySelector('ul').classList.remove('opacity-0');
-                    }, 50);
-
-                    span.textContent = 'Show Less';
-                } else {
-                    content.querySelector('ul').classList.add('opacity-0');
-                    content.classList.remove('grid-rows-[1fr]');
-                    content.classList.add('grid-rows-[0fr]');
-                    icon.classList.remove('rotate-180');
-                    
-                    span.textContent = 'Read More';
-                }
-                
-                setTimeout(() => updateScrollProgress(), 500);
-            });
-        });
-
-        // Scroll Progress Logic
-        const trackContainer = document.getElementById('experience-track');
-        const staticLine = document.getElementById('static-line');
-        const progressBar = document.getElementById('line-progress');
-        const dots = document.querySelectorAll('.timeline-dot');
-
-        function updateScrollProgress() {
-            if (!trackContainer || !staticLine || !progressBar || dots.length < 2) return;
-
-            const firstDot = dots[0];
-            const lastDot = dots[dots.length - 1];
-            
-            // Recalculate positions based on current layout
-            const firstDotTop = firstDot.offsetTop + (firstDot.offsetHeight / 2);
-            const lastDotTop = lastDot.offsetTop + (lastDot.offsetHeight / 2);
-            const totalDistance = lastDotTop - firstDotTop;
-
-            staticLine.style.top = `${firstDotTop}px`;
-            staticLine.style.height = `${totalDistance}px`;
-            progressBar.style.top = `${firstDotTop}px`;
-
-            const firstDotRect = firstDot.getBoundingClientRect();
-            const triggerPoint = window.innerHeight / 1.8; // Trigger slightly below center
-            const distFromTop = triggerPoint - firstDotRect.top - (firstDotRect.height / 2);
-
-            let fillHeight = Math.max(0, distFromTop);
-            fillHeight = Math.min(fillHeight, totalDistance);
-
-            progressBar.style.height = `${fillHeight}px`;
-            
-            // Light up dots
-            dots.forEach((dot, index) => {
-                 const dotTop = dot.getBoundingClientRect().top;
-                 if (dotTop < triggerPoint) {
-                     dot.classList.add('scale-125', 'ring-2', 'ring-white/50');
-                 } else {
-                     dot.classList.remove('scale-125', 'ring-2', 'ring-white/50');
-                 }
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', updateScrollProgress);
-        window.addEventListener('scroll', () => requestAnimationFrame(updateScrollProgress));
-        window.addEventListener('resize', updateScrollProgress);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
