@@ -23,6 +23,7 @@
                         'blob': 'blob 10s infinite',
                         'float': 'float 6s ease-in-out infinite',
                         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'shimmer': 'shimmer 2.5s linear infinite',
                     },
                     keyframes: {
                         blob: {
@@ -34,6 +35,10 @@
                         float: {
                             '0%, 100%': { transform: 'translateY(0)' },
                             '50%': { transform: 'translateY(-20px)' },
+                        },
+                        shimmer: {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(100%)' }
                         }
                     }
                 }
@@ -53,15 +58,15 @@
     <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/70 dark:bg-[#0b1120]/70 border-b border-slate-200 dark:border-white/10">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <a href="#" class="flex flex-col leading-none group">
-                <span class="text-xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-pink-500 group-hover:to-indigo-500 transition-all duration-500">
+                <span class="text-lg md:text-xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-pink-500 group-hover:to-indigo-500 transition-all duration-500">
                     DHIVAKARAN T
                 </span>
-                <span class="text-[10px] font-bold tracking-[0.35em] text-slate-500 dark:text-slate-400 uppercase pt-1 group-hover:text-indigo-500 transition-colors">
+                <span class="text-[9px] md:text-[10px] font-bold tracking-[0.35em] text-slate-500 dark:text-slate-400 uppercase pt-1 group-hover:text-indigo-500 transition-colors">
                     OPS ENGINEER
                 </span>
             </a>
-            <div class="flex items-center gap-6">
-                <a href="assets/resume.pdf" target="_blank" class="hidden md:block text-sm font-semibold hover:text-indigo-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-indigo-500 after:transition-all hover:after:w-full">
+            <div class="flex items-center gap-4 md:gap-6">
+                <a href="assets/resume.pdf" target="_blank" class="text-sm font-semibold hover:text-indigo-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-indigo-500 after:transition-all hover:after:w-full">
                     Resume
                 </a>
                 <button id="theme-toggle" class="p-2.5 rounded-full bg-slate-200/50 dark:bg-white/10 hover:scale-110 active:scale-95 transition-all duration-300 shadow-lg shadow-indigo-500/20 text-indigo-600 dark:text-indigo-400">
@@ -126,7 +131,6 @@
             <h2 class="text-4xl font-black mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-500" data-aos="fade-up">Technical Arsenal</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
                 <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-3 transition-all duration-500 group border-t border-white/50 dark:border-white/10 relative overflow-hidden" data-aos="fade-up" data-aos-delay="0">
                     <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1080&auto=format&fit=crop" 
                          alt="Cloud Background" 
@@ -138,7 +142,7 @@
                         </div>
                         <h3 class="font-bold text-xl mb-4">Cloud & Infra</h3>
                         <ul class="space-y-3">
-                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-blue-500/50 shadow-lg"></div>AWS (VPC, EC2, S3, Route 53, CloudWatch, IAM, Auto Scaling, ELB)</li>
+                            <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-blue-500/50 shadow-lg"></div>AWS (VPC, EC2, S3, Route 53, CloudWatch, IAM)</li>
                             <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-blue-500/50 shadow-lg"></div>Terraform</li>
                             <li class="flex items-center gap-2 text-sm opacity-80 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-blue-500/50 shadow-lg"></div>Kubernetes</li>
                         </ul>
@@ -389,6 +393,56 @@
                     </div>
                     <div class="absolute -right-6 -bottom-6 text-slate-100 dark:text-white/5 opacity-50 dark:opacity-100 rotate-12">
                          <i data-lucide="award" class="w-32 h-32"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="py-24 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <h2 class="text-4xl font-black mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-500" data-aos="fade-up">Featured Projects</h2>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="group relative bg-white/50 dark:bg-[#0f172a]/50 border border-slate-200 dark:border-white/10 rounded-[2rem] overflow-hidden hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500 backdrop-blur-sm" data-aos="zoom-in-up">
+                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-[1px] -z-10 rounded-[2rem]"></div>
+                    
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="relative h-64 md:h-auto overflow-hidden bg-slate-100 dark:bg-slate-800/50">
+                            <div class="absolute inset-0 bg-indigo-900/10 group-hover:bg-indigo-900/0 transition-colors z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1667372393119-c85c02088947?q=80&w=1600&auto=format&fit=crop" 
+                                 alt="DevOps Flask App Architecture" 
+                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                             
+                             <div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur p-2 rounded-xl shadow-lg z-20">
+                                <i data-lucide="container" class="w-6 h-6 text-indigo-500"></i>
+                             </div>
+                        </div>
+
+                        <div class="p-8 md:p-10 flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-white">DevOps Two-Tier Flask App</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                A scalable, containerized web application architecture demonstrating modern DevOps practices. Deployed a Flask API frontend with a MySQL backend using Infrastructure as Code principles.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300">Flask</span>
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300">Docker</span>
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300">Kubernetes</span>
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-300">MySQL</span>
+                            </div>
+
+                            <div class="flex items-center gap-4 mt-auto">
+                                <a href="https://github.com/Dhiva704" target="_blank" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-sm hover:-translate-y-1 transition-transform shadow-lg shadow-indigo-500/20">
+                                    <i data-lucide="github" class="w-4 h-4"></i> View Source
+                                </a>
+                                <a href="#" class="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 font-bold text-sm hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                    Details <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
