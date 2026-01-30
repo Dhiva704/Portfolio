@@ -405,18 +405,20 @@
                         </h3>
                         
                         <p class="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed font-medium">
-                            A scalable, containerized web application architecture demonstrating modern DevOps practices. Deployed a Flask API frontend with a MySQL backend using Infrastructure as Code principles.
+                            This project demonstrates a fully automated CI/CD pipeline for deploying a two-tier web application (Flask + MySQL) on an AWS EC2 instance.
+                            The application is containerized using Docker and orchestrated with Docker Compose. A Jenkins pipeline is configured to automatically build and deploy the application whenever new code is pushed to the GitHub repository.
                         </p>
 
                         <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1.5 rounded-lg text-xs font-bold bg-orange-50 dark:bg-orange-500/10 text-orange-700 dark:text-orange-200 border border-orange-100 dark:border-orange-500/20">AWS Ec2</span>
                             <span class="px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-500/10 text-sky-700 dark:text-sky-200 border border-sky-100 dark:border-sky-500/20">Flask</span>
                             <span class="px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-200 border border-blue-100 dark:border-blue-500/20">Docker</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-bold bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-200 border border-indigo-100 dark:border-indigo-500/20">Kubernetes</span>
+                            <span class="px-3 py-1.5 rounded-lg text-xs font-bold bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-200 border border-indigo-100 dark:border-indigo-500/20">Jenkins</span>
                             <span class="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-700/30 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600">MySQL</span>
                         </div>
 
                         <div class="flex items-center gap-4 mt-auto">
-                            <a href="https://github.com/Dhiva704" target="_blank" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-sm hover:-translate-y-1 transition-all shadow-lg shadow-sky-500/25">
+                            <a href="https://github.com/Dhiva704/Devops-two-tier-flask-app.git" target="_blank" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-sm hover:-translate-y-1 transition-all shadow-lg shadow-sky-500/25">
                                 <i data-lucide="github" class="w-4 h-4"></i> View Source
                             </a>
                             <a href="#" class="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-bold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
