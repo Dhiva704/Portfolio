@@ -69,6 +69,22 @@ img {
     max-width: 100%;
 }
 
+/* Company logos in experience section */
+.company-logo {
+    height: 2.5rem;
+    width: auto;
+    margin-right: 0.75rem;
+    vertical-align: middle;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+[data-theme="dark"] .company-logo {
+    filter: brightness(0) invert(1);
+}
+[data-theme="light"] .company-logo {
+    filter: brightness(0) invert(0);
+}
+
 a {
     color: inherit;
     text-decoration: none;
