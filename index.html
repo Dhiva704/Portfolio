@@ -1,65 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" data-theme="dark" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dhivakaran T portfolio for Senior Engineering Operations, AWS cloud-hosted SaaS, streaming platforms, SRE, ITIL, incident management, Docker, Kubernetes, Bash, and CI/CD.">
+    <meta name="description" content="Dhivakaran T — Senior Site Operations Engineer specializing in AWS, Kubernetes, observability, incident management, SRE, automation, and resilient production systems.">
     <meta name="theme-color" content="#020617">
-    <meta property="og:title" content="Dhivakaran T | Senior Engineering Operations">
-    <meta property="og:description" content="AWS Certified Senior Engineering Operations portfolio focused on reliability, incident response, observability, and automation.">
+    <meta property="og:title" content="Dhivakaran T | Senior Site Operations Engineer">
+    <meta property="og:description" content="Senior Site Operations Engineer driving 99.99% availability, 35% lower MTTR, and production operations for platforms serving 5M+ users.">
     <meta property="og:type" content="website">
-    <title>Dhivakaran T | Senior Engineering Operations Portfolio</title>
+    <title>Dhivakaran T | Senior Site Operations Engineer</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
                         ink: '#020617',
-                        aurora: '#7c3aed',
-                        primary: '#6366f1',
-                        electric: '#06b6d4',
-                        magenta: '#ec4899',
-                        success: '#10b981'
+                        panel: '#0b1220',
+                        cyan: '#22d3ee',
+                        electric: '#60a5fa',
+                        indigo: '#818cf8'
                     },
                     fontFamily: {
-                        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+                        display: ['Space Grotesk', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
                     },
                     boxShadow: {
-                        aura: '0 28px 100px rgba(99, 102, 241, 0.28)',
-                        glass: '0 24px 80px rgba(15, 23, 42, 0.12)'
+                        glow: '0 0 0 1px rgba(34, 211, 238, 0.10), 0 24px 80px rgba(2, 6, 23, 0.45)',
+                        card: '0 24px 70px rgba(2, 6, 23, 0.28)'
                     },
                     animation: {
-                        blob: 'blob 14s infinite',
-                        float: 'float 6s ease-in-out infinite',
-                        shimmer: 'shimmer 3s linear infinite',
-                        'gradient-x': 'gradient-x 9s ease infinite',
-                        'spin-slow': 'spin 18s linear infinite',
-                        'pulse-soft': 'pulse-soft 3.2s ease-in-out infinite'
+                        'spin-slow': 'spin 24s linear infinite',
+                        'pulse-soft': 'pulseSoft 3.6s ease-in-out infinite'
                     },
                     keyframes: {
-                        blob: {
-                            '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
-                            '33%': { transform: 'translate(38px, -52px) scale(1.08)' },
-                            '66%': { transform: 'translate(-28px, 26px) scale(0.94)' }
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-18px)' }
-                        },
-                        shimmer: {
-                            '0%': { transform: 'translateX(-125%)' },
-                            '100%': { transform: 'translateX(125%)' }
-                        },
-                        'gradient-x': {
-                            '0%, 100%': { backgroundPosition: '0% 50%' },
-                            '50%': { backgroundPosition: '100% 50%' }
-                        },
-                        'pulse-soft': {
-                            '0%, 100%': { opacity: '0.72', transform: 'scale(1)' },
-                            '50%': { opacity: '1', transform: 'scale(1.04)' }
+                        pulseSoft: {
+                            '0%, 100%': { opacity: '0.55' },
+                            '50%': { opacity: '1' }
                         }
                     }
                 }
@@ -69,422 +48,478 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.1/dist/umd/lucide.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="overflow-x-hidden bg-slate-50 text-slate-900 antialiased transition-colors duration-500 selection:bg-indigo-500 selection:text-white dark:bg-[#020617] dark:text-slate-100">
+<body class="bg-base text-text antialiased">
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <div class="site-progress" aria-hidden="true"><span id="scroll-progress"></span></div>
+    <div class="page-grid" aria-hidden="true"></div>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
 
-    <nav id="navbar" class="fixed inset-x-0 top-0 z-50 border-b border-white/20 bg-white/70 shadow-sm shadow-slate-900/5 backdrop-blur-2xl transition-all duration-300 dark:border-white/10 dark:bg-slate-950/70">
-        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
-            <a href="#home" class="group flex flex-col leading-none" aria-label="Dhivakaran T home">
-                <span class="bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-lg font-black tracking-tight text-transparent transition-all duration-500 group-hover:from-cyan-400 group-hover:to-indigo-500 md:text-xl">DHIVAKARAN T</span>
-                <span class="pt-1 text-[9px] font-bold uppercase tracking-[0.36em] text-slate-500 transition-colors group-hover:text-indigo-500 dark:text-slate-400 md:text-[10px]">Engineering Operations</span>
+    <header class="site-header">
+        <div class="mx-auto flex h-full max-w-7xl items-center justify-between px-5 sm:px-7 lg:px-9">
+            <a href="#home" class="brand" aria-label="Dhivakaran T home">
+                <span class="brand-mark" aria-hidden="true">DT</span>
+                <span class="brand-copy">
+                    <strong>DHIVAKARAN T</strong>
+                    <small>SITE OPERATIONS</small>
+                </span>
             </a>
 
-            <div class="hidden items-center gap-7 text-sm font-bold text-slate-600 dark:text-slate-300 lg:flex" aria-label="Primary navigation">
+            <nav class="desktop-nav" aria-label="Primary navigation">
                 <a class="nav-link" href="#summary">Summary</a>
-                <a class="nav-link" href="#skills">Skills</a>
+                <a class="nav-link" href="#skills">Capabilities</a>
                 <a class="nav-link" href="#experience">Experience</a>
                 <a class="nav-link" href="#projects">Projects</a>
                 <a class="nav-link" href="#contact">Contact</a>
-            </div>
+            </nav>
 
-            <div class="flex items-center gap-3">
-                <a href="#contact" class="hidden rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm font-extrabold text-slate-800 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-300 hover:text-indigo-600 hover:shadow-lg hover:shadow-indigo-500/15 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:border-indigo-400/50 sm:inline-flex">Hire / Connect</a>
-                <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" class="rounded-full border border-slate-200 bg-white/80 p-2.5 text-slate-700 shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-indigo-500/20 active:scale-95 dark:border-white/10 dark:bg-white/10 dark:text-cyan-300 lg:hidden">
-                    <i data-lucide="menu" class="h-5 w-5"></i>
+            <div class="flex items-center gap-2">
+                <a href="#contact" class="header-cta">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Available
+                </a>
+                <button id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true" class="icon-button">
+                    <i data-lucide="sun" aria-hidden="true"></i>
                 </button>
-                <button id="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false" class="rounded-full border border-slate-200 bg-white/80 p-2.5 text-indigo-600 shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-indigo-500/20 active:scale-95 dark:border-white/10 dark:bg-white/10 dark:text-cyan-300">
-                    <i data-lucide="moon" class="block h-5 w-5 dark:hidden"></i>
-                    <i data-lucide="sun" class="hidden h-5 w-5 dark:block"></i>
+                <button id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="icon-button lg:hidden">
+                    <i data-lucide="menu" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden border-t border-slate-200/70 bg-white/90 px-5 py-4 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/90 lg:hidden">
-            <div class="mx-auto grid max-w-7xl gap-3 text-sm font-extrabold text-slate-700 dark:text-slate-200">
-                <a class="mobile-link rounded-2xl px-4 py-3 hover:bg-slate-100 dark:hover:bg-white/10" href="#summary">Summary</a>
-                <a class="mobile-link rounded-2xl px-4 py-3 hover:bg-slate-100 dark:hover:bg-white/10" href="#skills">Skills</a>
-                <a class="mobile-link rounded-2xl px-4 py-3 hover:bg-slate-100 dark:hover:bg-white/10" href="#experience">Experience</a>
-                <a class="mobile-link rounded-2xl px-4 py-3 hover:bg-slate-100 dark:hover:bg-white/10" href="#projects">Projects</a>
-                <a class="mobile-link rounded-2xl px-4 py-3 hover:bg-slate-100 dark:hover:bg-white/10" href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
 
-    <main id="home">
-        <section class="relative flex min-h-screen items-center overflow-hidden pt-24">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(99,102,241,0.20),transparent_32%),radial-gradient(circle_at_80%_10%,rgba(236,72,153,0.18),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(6,182,212,0.16),transparent_34%)]"></div>
-            <div class="absolute -left-24 top-24 h-80 w-80 rounded-full bg-indigo-500/25 blur-3xl animate-blob"></div>
-            <div class="animation-delay-2000 absolute -right-24 top-24 h-96 w-96 rounded-full bg-pink-500/20 blur-3xl animate-blob"></div>
-            <div class="animation-delay-4000 absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-cyan-500/20 blur-3xl animate-blob"></div>
+        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation" hidden>
+            <a class="mobile-link" href="#summary">Summary</a>
+            <a class="mobile-link" href="#skills">Capabilities</a>
+            <a class="mobile-link" href="#experience">Experience</a>
+            <a class="mobile-link" href="#projects">Projects</a>
+            <a class="mobile-link" href="#contact">Contact</a>
+        </nav>
+    </header>
 
-            <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:px-8">
-                <div class="relative z-10" data-aos="fade-right">
-                    <div class="mb-7 inline-flex items-center gap-3 rounded-full border border-white/40 bg-white/60 px-4 py-2 shadow-xl shadow-indigo-500/10 backdrop-blur-xl dark:border-white/10 dark:bg-white/5">
-                        <span class="relative flex h-2.5 w-2.5">
-                            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
-                            <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
-                        </span>
-                        <span class="text-sm font-extrabold text-slate-700 dark:text-slate-200">Senior Engineering Operations</span>
+    <main id="main-content">
+        <section id="home" class="hero-section">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-36 sm:px-7 lg:grid-cols-[1.05fr_0.95fr] lg:px-9 lg:pb-24">
+                <div class="hero-copy" data-aos="fade-right">
+                    <div class="status-pill">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        Production operations · 24×7
                     </div>
 
-                    <h1 class="max-w-4xl text-5xl font-black leading-[0.92] tracking-[-0.06em] text-slate-950 dark:text-white sm:text-6xl lg:text-7xl xl:text-8xl">
-                        Reliability for
-                        <span class="animate-gradient-x block bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-cyan-400 bg-[length:220%_220%] bg-clip-text text-transparent">cloud-hosted SaaS and streaming platforms.</span>
+                    <p class="hero-role">Senior Site Operations Engineer</p>
+                    <h1 class="hero-title">
+                        Reliability at the scale of
+                        <span>5M+ users.</span>
                     </h1>
 
-                    <p class="mt-8 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300 md:text-xl">
-                        Senior Engineering Operations professional with over 6 years of experience enhancing reliability in AWS cloud-hosted SaaS and streaming platforms. Expert in incident management, production monitoring, and root cause analysis with a proven history of reducing MTTR and leading cross-functional incident responses. Skilled in container orchestration with Docker and Kubernetes, and automating operations using Bash and CI/CD toolchains. AWS Certified Solutions Architect driving production stability in 24/7 environments aligned to SRE and ITIL frameworks.
+                    <p class="hero-summary">
+                        I lead incident management, major-incident coordination, and production operations for large-scale distributed systems. Across AWS, Kubernetes, and hybrid environments, I have reduced MTTR by 35%, sustained 99.99% availability, and removed more than 40 hours of monthly operational toil through automation.
                     </p>
 
-                    <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-                        <a href="#experience" class="group relative inline-flex items-center justify-center overflow-hidden rounded-2xl bg-slate-950 px-7 py-4 text-sm font-black text-white shadow-2xl shadow-indigo-500/25 transition-all duration-300 hover:-translate-y-1 hover:shadow-indigo-500/40 dark:bg-white dark:text-slate-950">
-                            <span class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
-                            <span class="relative flex items-center gap-2 group-hover:text-white">View Experience <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i></span>
+                    <div class="hero-actions">
+                        <a href="#experience" class="button button-primary">
+                            View experience
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
                         </a>
-                        <a href="#projects" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white/70 px-7 py-4 text-sm font-black text-slate-900 shadow-lg shadow-slate-900/5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:text-cyan-700 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:text-cyan-300">Explore Projects</a>
+                        <a href="#projects" class="button button-secondary">
+                            Explore projects
+                        </a>
+                    </div>
+
+                    <div class="hero-facts" aria-label="Career highlights">
+                        <span><i data-lucide="badge-check" aria-hidden="true"></i>AWS Certified</span>
+                        <span><i data-lucide="clock-3" aria-hidden="true"></i>6+ years</span>
+                        <span><i data-lucide="globe-2" aria-hidden="true"></i>Global platforms</span>
                     </div>
                 </div>
 
-                <div class="relative z-10" data-aos="fade-left" data-aos-delay="150">
-                    <div class="absolute -inset-6 rounded-[2.8rem] bg-gradient-to-br from-indigo-500/20 via-fuchsia-500/10 to-cyan-500/20 blur-2xl"></div>
-                    <div class="glass-card relative overflow-hidden rounded-[2.2rem] p-4">
-                        <div class="relative overflow-hidden rounded-[1.8rem] bg-slate-950">
-                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1400&auto=format&fit=crop" alt="Cloud infrastructure operations dashboard" class="h-[30rem] w-full object-cover opacity-70 saturate-125" loading="eager" decoding="async">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/35 to-transparent"></div>
-                            <div class="absolute left-5 right-5 top-5 flex items-center justify-between rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-xs font-black uppercase tracking-[0.22em] text-white backdrop-blur-xl">
-                                <span>24/7 Reliability</span>
-                                <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-400"></span>Live Ops</span>
-                            </div>
-                            <div class="absolute bottom-5 left-5 right-5 rounded-3xl border border-white/10 bg-white/10 p-5 text-white backdrop-blur-xl">
-                                <div class="grid grid-cols-3 gap-3 text-center">
-                                    <div class="rounded-2xl bg-white/10 p-4"><div class="text-2xl font-black">6+</div><div class="text-[10px] font-bold uppercase tracking-widest text-white/70">Years</div></div>
-                                    <div class="rounded-2xl bg-white/10 p-4"><div class="text-2xl font-black">24/7</div><div class="text-[10px] font-bold uppercase tracking-widest text-white/70">Ops</div></div>
-                                    <div class="rounded-2xl bg-white/10 p-4"><div class="text-2xl font-black">AWS</div><div class="text-[10px] font-bold uppercase tracking-widest text-white/70">Certified</div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="summary" class="relative overflow-hidden py-24 sm:py-28">
-            <div class="absolute inset-0 bg-grid-pattern opacity-70"></div>
-            <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-                <div class="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
-                    <div data-aos="fade-up">
-                        <span class="section-kicker">Professional Summary</span>
-                        <h2 class="mt-4 text-4xl font-black tracking-[-0.04em] text-slate-950 dark:text-white md:text-5xl">Operational strength for high-pressure production environments.</h2>
-                    </div>
-                    <div class="glass-card rounded-[2rem] p-7 sm:p-9" data-aos="fade-up" data-aos-delay="100">
-                        <p class="text-lg font-semibold leading-9 text-slate-700 dark:text-slate-200">
-                            Senior Engineering Operations professional with over 6 years of experience enhancing reliability in AWS cloud-hosted SaaS and streaming platforms. Expert in incident management, production monitoring, and root cause analysis with a proven history of reducing MTTR and leading cross-functional incident responses. Skilled in container orchestration with Docker and Kubernetes, and automating operations using Bash and CI/CD toolchains. AWS Certified Solutions Architect driving production stability in 24/7 environments aligned to SRE and ITIL frameworks.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="relative py-24 sm:py-28">
-            <div class="absolute right-0 top-1/3 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl"></div>
-            <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-                <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-                    <span class="section-kicker justify-center before:hidden after:block after:h-[2px] after:w-8 after:rounded-full after:bg-gradient-to-r after:from-indigo-500 after:to-cyan-400">Technical Skills</span>
-                    <h2 class="mt-4 text-4xl font-black tracking-[-0.04em] text-slate-950 dark:text-white md:text-5xl">Cloud, SRE, automation, and production support toolkit.</h2>
-                </div>
-
-                <div class="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-                    <article class="skill-card" data-aos="fade-up"><div class="skill-icon text-indigo-500"><i data-lucide="cloud" class="h-7 w-7"></i></div><h3>Cloud & Infrastructure</h3><p>AWS (EC2, S3, VPC, Auto Scaling Groups, CloudWatch, IAM), Terraform (IaC)</p></article>
-                    <article class="skill-card" data-aos="fade-up" data-aos-delay="40"><div class="skill-icon text-cyan-500"><i data-lucide="boxes" class="h-7 w-7"></i></div><h3>Containers & Orchestration</h3><p>Docker, Docker Compose, Kubernetes</p></article>
-                    <article class="skill-card" data-aos="fade-up" data-aos-delay="80"><div class="skill-icon text-pink-500"><i data-lucide="activity" class="h-7 w-7"></i></div><h3>Monitoring & Observability</h3><p>Prometheus, New Relic, AWS CloudWatch, LogicMonitor, Opsgenie</p></article>
-                    <article class="skill-card" data-aos="fade-up" data-aos-delay="120"><div class="skill-icon text-emerald-500"><i data-lucide="terminal" class="h-7 w-7"></i></div><h3>Operating Systems</h3><p>Linux (Ubuntu, CentOS)</p></article>
-                    <article class="skill-card" data-aos="fade-up"><div class="skill-icon text-violet-500"><i data-lucide="workflow" class="h-7 w-7"></i></div><h3>Scripting & Automation</h3><p>Bash Shell Scripting, N8N Automation</p></article>
-                    <article class="skill-card" data-aos="fade-up" data-aos-delay="40"><div class="skill-icon text-blue-500"><i data-lucide="git-branch" class="h-7 w-7"></i></div><h3>CI/CD & Version Control</h3><p>Jenkins, Git, GitHub, CI/CD Pipelines</p></article>
-                    <article class="skill-card" data-aos="fade-up" data-aos-delay="80"><div class="skill-icon text-rose-500"><i data-lucide="radio-tower" class="h-7 w-7"></i></div><h3>ITSM & Incident Tools</h3><p>Jira, Zendesk, PagerDuty, ServiceNow, Incident Bridge Management</p></article>
-                    <article class="skill-card" data-aos="fade-up" data-aos-delay="120"><div class="skill-icon text-orange-500"><i data-lucide="server" class="h-7 w-7"></i></div><h3>Web & App Stack</h3><p>Apache, Tomcat, Nginx, MySQL, Flask</p></article>
-                </div>
-
-                <div class="mt-5 rounded-[2rem] border border-indigo-200/70 bg-indigo-50/70 p-6 shadow-lg shadow-indigo-500/10 backdrop-blur-xl dark:border-indigo-400/20 dark:bg-indigo-500/10" data-aos="fade-up">
-                    <div class="flex flex-col gap-3 sm:flex-row sm:items-start">
-                        <div class="skill-icon shrink-0 text-indigo-500 dark:text-cyan-300"><i data-lucide="shield-check" class="h-7 w-7"></i></div>
+                <div class="architecture-console" data-aos="fade-left" data-aos-delay="120">
+                    <div class="console-header">
                         <div>
-                            <h3 class="text-xl font-black text-slate-950 dark:text-white">Frameworks & Practices</h3>
-                            <p class="mt-2 text-base font-semibold leading-8 text-slate-700 dark:text-slate-200">SRE, ITIL, Incident Management, Problem Management, Change Management, Blameless Postmortems, RCA, Service Availability Management</p>
+                            <span class="eyebrow">Live topology</span>
+                            <strong>System architecture</strong>
+                        </div>
+                        <div class="console-state">
+                            <span class="status-dot"></span>
+                            NOMINAL
+                        </div>
+                    </div>
+
+                    <div class="canvas-wrap">
+                        <canvas id="network-canvas" aria-label="Abstract animated system architecture network connecting AWS, Kubernetes, observability, CI/CD, and operations"></canvas>
+                        <div class="canvas-corner corner-one"></div>
+                        <div class="canvas-corner corner-two"></div>
+                        <div class="canvas-node-label label-one">AWS</div>
+                        <div class="canvas-node-label label-two">KUBERNETES</div>
+                        <div class="canvas-node-label label-three">OBSERVABILITY</div>
+                    </div>
+
+                    <div class="console-footer">
+                        <div><span>REGION</span><strong>Multi-AZ</strong></div>
+                        <div><span>DEPLOY</span><strong>GitOps</strong></div>
+                        <div><span>LATENCY</span><strong class="text-cyan">LOW</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mx-auto max-w-7xl px-5 sm:px-7 lg:px-9">
+                <div class="metrics-strip" aria-label="Impact metrics">
+                    <div class="metric-tile" data-counter data-counter-target="99.99" data-counter-decimals="2" data-counter-suffix="%">
+                        <span class="metric-value"><span class="counter">0.00</span>%</span>
+                        <span class="metric-label">Platform uptime</span>
+                    </div>
+                    <div class="metric-tile" data-counter data-counter-target="35" data-counter-suffix="%">
+                        <span class="metric-value"><span class="counter">0</span>%</span>
+                        <span class="metric-label">MTTR reduction</span>
+                    </div>
+                    <div class="metric-tile" data-counter data-counter-target="5" data-counter-suffix="M+">
+                        <span class="metric-value"><span class="counter">0</span>M+</span>
+                        <span class="metric-label">Users supported</span>
+                    </div>
+                    <div class="metric-tile" data-counter data-counter-target="40" data-counter-suffix="+">
+                        <span class="metric-value"><span class="counter">0</span>+</span>
+                        <span class="metric-label">Toil hours removed / month</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="summary" class="section-section">
+            <div class="mx-auto max-w-7xl px-5 sm:px-7 lg:px-9">
+                <div class="section-heading" data-aos="fade-up">
+                    <div>
+                        <span class="eyebrow eyebrow-accent">01 / Professional profile</span>
+                        <h2>Operational excellence for high-scale distributed systems.</h2>
+                    </div>
+                    <span class="section-index" aria-hidden="true">SRE / OPS</span>
+                </div>
+
+                <div class="dashboard-panel summary-panel" data-aos="fade-up">
+                    <div class="panel-rail" aria-hidden="true">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div>
+                        <div class="summary-lead">
+                            <i data-lucide="radio-tower" aria-hidden="true"></i>
+                            <span>Reliability is engineered into every layer.</span>
+                        </div>
+                        <p>
+                            Senior Site Operations Engineer with 6+ years leading incident management, major-incident coordination, and production operations for large-scale distributed systems. I combine SLA/SLO governance, observability, automation, and blameless problem management to keep business-critical platforms resilient. My experience spans AWS, Kubernetes, hybrid infrastructure, global shared services, and 24×7 environments serving millions of users and tens of thousands of customers.
+                        </p>
+                        <div class="summary-tags">
+                            <span>AWS</span><span>Kubernetes</span><span>SRE</span><span>Incident Command</span><span>SLA / SLO</span><span>Automation</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="relative overflow-hidden py-24 sm:py-28">
-            <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-400/60 to-transparent"></div>
-            <div class="absolute left-0 top-20 h-[35rem] w-[35rem] rounded-full bg-indigo-500/10 blur-3xl"></div>
-            <div class="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
-                <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-                    <span class="section-kicker justify-center before:hidden after:block after:h-[2px] after:w-8 after:rounded-full after:bg-gradient-to-r after:from-indigo-500 after:to-cyan-400">Professional Experience</span>
-                    <h2 class="mt-4 text-4xl font-black tracking-[-0.04em] text-slate-950 dark:text-white md:text-5xl">Production operations across SaaS, streaming, and cloud platforms.</h2>
+        <section id="skills" class="section-section">
+            <div class="mx-auto max-w-7xl px-5 sm:px-7 lg:px-9">
+                <div class="section-heading split-heading" data-aos="fade-up">
+                    <div>
+                        <span class="eyebrow eyebrow-accent">02 / Technical capabilities</span>
+                        <h2>Built for production, not just deployment.</h2>
+                    </div>
+                    <p>Eight operational domains spanning cloud infrastructure, automation, observability, security, and incident response.</p>
                 </div>
 
-                <div id="experience-track" class="relative mt-16 pl-4 sm:pl-8">
-                    <div id="static-line" class="absolute left-4 w-[2px] rounded-full bg-slate-200 dark:bg-white/10 sm:left-8"></div>
-                    <div id="line-progress" class="absolute left-4 z-10 w-[2px] rounded-full bg-gradient-to-b from-indigo-500 via-fuchsia-500 to-cyan-400 sm:left-8" style="height:0px"><div class="absolute -bottom-2 -left-[7px] h-4 w-4 rounded-full border-[3px] border-white bg-indigo-500 shadow-[0_0_22px_rgba(99,102,241,0.75)] dark:border-slate-950"></div></div>
+                <div class="skills-grid">
+                    <article class="skill-card" data-aos="fade-up">
+                        <div class="skill-top"><span class="skill-icon"><i data-lucide="cloud" aria-hidden="true"></i></span><span class="skill-code">CLD–01</span></div>
+                        <h3>Cloud Platforms</h3>
+                        <p>AWS EC2, VPC, EKS, RDS, S3, IAM, and CloudWatch across production workloads.</p>
+                    </article>
+                    <article class="skill-card" data-aos="fade-up" data-aos-delay="40">
+                        <div class="skill-top"><span class="skill-icon"><i data-lucide="boxes" aria-hidden="true"></i></span><span class="skill-code">CNT–02</span></div>
+                        <h3>Containers & Orchestration</h3>
+                        <p>Kubernetes, Docker, ContainerD, Helm, Kustomize, RBAC, service mesh, and node health.</p>
+                    </article>
+                    <article class="skill-card" data-aos="fade-up" data-aos-delay="80">
+                        <div class="skill-top"><span class="skill-icon"><i data-lucide="activity" aria-hidden="true"></i></span><span class="skill-code">OBS–03</span></div>
+                        <h3>Monitoring & Observability</h3>
+                        <p>Datadog, Prometheus, Grafana, CloudWatch, LogicMonitor, New Relic, Sumo Logic, and Opsgenie.</p>
+                    </article>
+                    <article class="skill-card" data-aos="fade-up" data-aos-delay="120">
+                        <div class="skill-top"><span class="skill-icon"><i data-lucide="settings" aria-hidden="true"></i></span><span class="skill-code">AUT–04</span></div>
+                        <h3>IaC & Automation</h3>
+                        <p>Terraform, Ansible, infrastructure automation, server patching, and toil reduction.</p>
+                    </article>
+                    <article class="skill-card" data-aos="fade-up">
+                        <div class="skill-top"><span class="skill-icon"><i data-lucide="workflow" aria-hidden="true"></i></span><span class="skill-code">CICD–05</span></div>
+                        <h3>CI/CD & Deployment</h3>
+                        <p>Jenkins pipelines and GitOps delivery with Argo CD.</p>
+                    </article>
+                    <article class="skill-card" data-aos="fade-up" data-aos-delay="40">
+                        <div class="skill-top"><span class="skill-icon"><i data-lucide="shield" aria-hidden="true"></i></span><span class="skill-code">SEC–06</span></div>
+                        <h3>Infrastructure & Security</h3>
+                        <p>ELB, Palo Alto, SSL/TLS, HashiCorp Vault, IAM, and network management.</p>
+                    </article>
+                    <article class="skill-card" data-aos="fade-up" data-aos-delay="80">
+                        <div class="skill-top"><span class="skill-icon"><i data-lucide="terminal" aria-hidden="true"></i></span><span class="skill-code">CODE–07</span></div>
+                        <h3>Programming & Scripting</h3>
+                        <p>Bash, shell scripting, and Python for diagnostics and operational automation.</p>
+                    </article>
+                    <article class="skill-card" data-aos="fade-up" data-aos-delay="120">
+                        <div class="skill-top"><span class="skill-icon"><i data-lucide="radio-tower" aria-hidden="true"></i></span><span class="skill-code">ITSM–08</span></div>
+                        <h3>ITSM & Incident Tools</h3>
+                        <p>Jira, PagerDuty, ServiceNow, Zendesk, and major-incident bridge management.</p>
+                    </article>
+                </div>
 
-                    <div class="space-y-10">
-                        <article class="timeline-item" data-aos="fade-left">
-                            <div class="timeline-dot bg-indigo-500"></div>
-                            <div class="experience-card glass-card rounded-[2rem] p-6 sm:p-8">
-                                <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-                                    <div>
-                                        <p class="role-date">Apr 2024 – Present</p>
-                                        <h3>Engineer 3, Engineering Operations</h3>
-                                        <p class="company">Comcast / NBCUniversal  •  Chennai, India</p>
-                                    </div>
-                                    <div class="role-icon text-indigo-500"><i data-lucide="broadcast" class="h-7 w-7"></i></div>
+                <div class="frameworks-bar" data-aos="fade-up">
+                    <div class="framework-icon"><i data-lucide="shield-check" aria-hidden="true"></i></div>
+                    <div>
+                        <strong>Frameworks & practices</strong>
+                        <p>SRE · ITIL · Incident & Major-Incident Management · Problem & Change Management · Blameless Postmortems · RCA · SLA/SLO Governance · Error-Budget Tracking · Service Availability Management</p>
+                    </div>
+                    <span class="framework-status">OPERATING MODEL</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section-section">
+            <div class="mx-auto max-w-7xl px-5 sm:px-7 lg:px-9">
+                <div class="section-heading split-heading" data-aos="fade-up">
+                    <div>
+                        <span class="eyebrow eyebrow-accent">03 / Professional experience</span>
+                        <h2>A record of measurable operational impact.</h2>
+                    </div>
+                    <p>Three consolidated roles across streaming, SaaS, and multi-client cloud operations.</p>
+                </div>
+
+                <div class="experience-timeline">
+                    <article class="experience-entry" data-aos="fade-up">
+                        <div class="timeline-marker"><span></span></div>
+                        <div class="experience-panel">
+                            <div class="experience-header">
+                                <div>
+                                    <span class="date-chip">May 2024 – Present</span>
+                                    <h3>Senior Site Operations Engineer</h3>
+                                    <p class="company">Comcast / NBCUniversal <span>Chennai, India · Remote</span></p>
                                 </div>
-                                <p class="stack"><span>Stack:</span> AWS, Docker, Kubernetes, Jenkins, GitHub, Bash, Prometheus, Opsgenie, Jira, Zendesk</p>
-                                <ul class="resume-list preview-list">
-                                    <li>Led incident response for FreeWheel video streaming platforms by coordinating Engineering, Platform, Deployment, and Operations teams during critical production incidents.</li>
-                                    <li>Monitored production workloads using Prometheus and Opsgenie, proactively detecting service degradation, infrastructure anomalies, and application health issues.</li>
-                                    <li>Troubleshoot AWS-hosted production incidents by analyzing alerts, logs, monitoring dashboards, and service dependencies to support faster service restoration.</li>
-                                </ul>
-                                <div id="exp-comcast" class="hidden-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
-                                    <ul class="resume-list overflow-hidden pt-0 opacity-0 transition-opacity duration-300">
-                                        <li>Supported Docker and Kubernetes-based workloads by validating deployments, investigating runtime failures, and assisting with production troubleshooting for customer-facing systems.</li>
-                                        <li>Coordinated Change Management activities across Engineering, Platform, and Release teams — reviewing deployment readiness, validating service health post-change, and documenting change impact.</li>
-                                        <li>Participated in Problem Management reviews, contributing incident timelines, pattern analysis, and follow-up action items to drive systemic reliability improvements.</li>
-                                        <li>Automated recurring operational tasks using Bash scripting, reducing manual toil and improving incident response consistency across shifts.</li>
-                                        <li>Maintained high-quality incident records in Jira and Zendesk — capturing escalation notes, stakeholder communications, and post-incident documentation throughout the full incident lifecycle.</li>
-                                        <li>Drove SRE-aligned operational improvements focused on reducing alert volume, improving detection coverage, and accelerating MTTR across production services.</li>
-                                    </ul>
-                                </div>
-                                <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="exp-comcast"><span>Read More</span><i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+                                <span class="role-icon"><i data-lucide="broadcast" aria-hidden="true"></i></span>
                             </div>
-                        </article>
-
-                        <article class="timeline-item" data-aos="fade-left">
-                            <div class="timeline-dot bg-pink-500"></div>
-                            <div class="experience-card glass-card rounded-[2rem] p-6 sm:p-8">
-                                <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-                                    <div>
-                                        <p class="role-date">Oct 2023 – Apr 2024</p>
-                                        <h3>Senior NOC Engineer</h3>
-                                        <p class="company">Freshworks  •  Chennai, India</p>
-                                    </div>
-                                    <div class="role-icon text-pink-500"><i data-lucide="radar" class="h-7 w-7"></i></div>
-                                </div>
-                                <p class="stack"><span>Stack:</span> AWS (EC2, S3, VPC, Auto Scaling Groups, CloudWatch), Linux (Ubuntu, CentOS), Docker, Kubernetes, Prometheus, New Relic, Teleport, N8N, Bash</p>
-                                <ul class="resume-list preview-list">
-                                    <li>Managed production operations for enterprise SaaS platforms, monitoring application performance, infrastructure health, and service availability across 24x7 environments.</li>
-                                    <li>Investigated production alerts using Prometheus, New Relic, and AWS CloudWatch — validating impact, identifying root cause indicators, and coordinating resolution with engineering teams.</li>
-                                    <li>Administered Linux environments (Ubuntu, CentOS) by performing log analysis, service validation, process health checks, and system-level troubleshooting to support incident resolution.</li>
-                                </ul>
-                                <div id="exp-senior-noc" class="hidden-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
-                                    <ul class="resume-list overflow-hidden pt-0 opacity-0 transition-opacity duration-300">
-                                        <li>Operated AWS cloud infrastructure spanning EC2, S3, VPC, Auto Scaling Groups, and CloudWatch as part of day-to-day production support and incident triage.</li>
-                                        <li>Monitored Docker and Kubernetes workloads — supporting deployment validation, container-level failure investigation, and runtime issue resolution alongside engineering teams.</li>
-                                        <li>Leveraged Teleport for secure, auditable access to production infrastructure during troubleshooting, validation, and maintenance activities.</li>
-                                        <li>Built N8N automation workflows and Bash scripts to streamline repetitive operational tasks, reducing manual intervention and improving team efficiency.</li>
-                                        <li>Led Root Cause Analysis (RCA) sessions and post-incident reviews, identifying monitoring gaps, improving escalation accuracy, and driving preventive action implementation.</li>
-                                        <li>Maintained operational runbooks, escalation procedures, and knowledge articles to ensure consistent, shift-independent incident handling across the NOC team.</li>
-                                    </ul>
-                                </div>
-                                <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="exp-senior-noc"><span>Read More</span><i data-lucide="chevron-down" class="h-4 w-4"></i></button>
-                            </div>
-                        </article>
-
-                        <article class="timeline-item" data-aos="fade-left">
-                            <div class="timeline-dot bg-violet-500"></div>
-                            <div class="experience-card glass-card rounded-[2rem] p-6 sm:p-8">
-                                <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-                                    <div>
-                                        <p class="role-date">Mar 2022 – Sep 2023</p>
-                                        <h3>NOC Engineer</h3>
-                                        <p class="company">Freshworks  •  Chennai, India</p>
-                                    </div>
-                                    <div class="role-icon text-violet-500"><i data-lucide="headphones" class="h-7 w-7"></i></div>
-                                </div>
-                                <p class="stack"><span>Stack:</span> Prometheus, New Relic, AWS CloudWatch, Teleport, Linux</p>
-                                <ul class="resume-list preview-list">
-                                    <li>Delivered 24x7 monitoring and production support for enterprise SaaS applications — responding to alerts, triaging incidents by severity, and initiating appropriate escalation paths.</li>
-                                    <li>Coordinated major incident bridge calls by engaging on-call engineers, tracking troubleshooting progress, and driving stakeholder communication through to service recovery.</li>
-                                    <li>Managed outage communications and status page updates, maintaining clear and timely information for internal stakeholders during production incidents and service disruptions.</li>
-                                </ul>
-                                <div id="exp-noc" class="hidden-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
-                                    <ul class="resume-list overflow-hidden pt-0 opacity-0 transition-opacity duration-300">
-                                        <li>Investigated recurring alerts and contributed to alert-tuning initiatives, reducing operational noise and improving signal-to-noise ratio across monitoring platforms.</li>
-                                        <li>Performed log analysis and application-level troubleshooting to accelerate incident diagnosis and reduce mean time to restore (MTTR).</li>
-                                        <li>Maintained incident records, escalation timelines, shift handover notes, and operational documentation in line with established NOC support processes.</li>
-                                    </ul>
-                                </div>
-                                <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="exp-noc"><span>Read More</span><i data-lucide="chevron-down" class="h-4 w-4"></i></button>
-                            </div>
-                        </article>
-
-                        <article class="timeline-item" data-aos="fade-left">
-                            <div class="timeline-dot bg-cyan-500"></div>
-                            <div class="experience-card glass-card rounded-[2rem] p-6 sm:p-8">
-                                <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-                                    <div>
-                                        <p class="role-date">Sep 2019 – Feb 2022</p>
-                                        <h3>CloudOps Engineer</h3>
-                                        <p class="company">Cognisive IT Services (Formerly Indmax)  •  Coimbatore, India</p>
-                                    </div>
-                                    <div class="role-icon text-cyan-500"><i data-lucide="server-cog" class="h-7 w-7"></i></div>
-                                </div>
-                                <p class="stack"><span>Stack:</span> AWS EC2, Linux (Ubuntu, CentOS), Apache, Tomcat, MySQL, LogicMonitor, Opsgenie</p>
-                                <ul class="resume-list preview-list">
-                                    <li>Supported cloud-hosted customer environments by continuously monitoring server health, application availability, and infrastructure performance across production systems.</li>
-                                    <li>Administered Linux servers running Apache, Tomcat, and MySQL workloads — performing service validation, log review, process monitoring, and disk usage management.</li>
-                                    <li>Used LogicMonitor and Opsgenie to detect alerts, assess impact severity, escalate to relevant teams, and support incident response through to resolution.</li>
-                                </ul>
-                                <div id="exp-cloudops" class="hidden-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
-                                    <ul class="resume-list overflow-hidden pt-0 opacity-0 transition-opacity duration-300">
-                                        <li>Performed routine operational checks including service health validation, process monitoring, log analysis, and capacity verification across managed environments.</li>
-                                        <li>Monitored AWS EC2 instances for availability and performance, supporting operational readiness and assisting with routine infrastructure maintenance activities.</li>
-                                        <li>Documented incident updates, troubleshooting findings, escalation notes, and resolution details to maintain operational continuity and support knowledge transfer.</li>
-                                    </ul>
-                                </div>
-                                <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="exp-cloudops"><span>Read More</span><i data-lucide="chevron-down" class="h-4 w-4"></i></button>
-                            </div>
-                        </article>
-
-                        <article class="timeline-item" data-aos="fade-left">
-                            <div class="timeline-dot bg-emerald-500"></div>
-                            <div class="experience-card glass-card rounded-[2rem] p-6 sm:p-8">
-                                <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-                                    <div>
-                                        <p class="role-date">May 2019 – Aug 2019</p>
-                                        <h3>Intern – Cloud Operations</h3>
-                                        <p class="company">Cognisive IT Services (Formerly Indmax)  •  Coimbatore, India</p>
-                                    </div>
-                                    <div class="role-icon text-emerald-500"><i data-lucide="graduation-cap" class="h-7 w-7"></i></div>
-                                </div>
-                                <ul class="resume-list">
-                                    <li>Assisted senior engineers with Linux server monitoring, application health checks, and operational support tasks across Apache, Tomcat, MySQL, and AWS EC2 environments.</li>
-                                    <li>Gained foundational hands-on exposure to production monitoring workflows, incident tracking tools, log analysis, and cloud operations best practices.</li>
+                            <div class="stack-line"><span>STACK</span> AWS · Kubernetes · Docker · Prometheus · Opsgenie · PagerDuty · Jira · Bash · Python · Generative AI</div>
+                            <ul class="achievement-list">
+                                <li>Led incident management and major-incident coordination for direct-to-consumer streaming platforms serving 5M+ users, cutting MTTR by <strong>35%</strong>.</li>
+                                <li>Sustained <strong>99.99% availability</strong> through 24×7 on-call operations and proactive mitigation across distributed AWS infrastructure.</li>
+                                <li>Re-tuned SLA/SLO thresholds and telemetry, reducing false-positive alerts by <strong>35%</strong> and recurring alert fatigue.</li>
+                            </ul>
+                            <div class="hidden-content" id="exp-comcast">
+                                <ul class="achievement-list">
+                                    <li>Facilitated blameless postmortems and root-cause analysis, reducing recurring operational toil by 25%.</li>
+                                    <li>Directed executive incident-communication bridges in a GCC/shared-services model with 100% SLA notification compliance.</li>
+                                    <li>Codified operational runbooks, eliminating 40+ hours of monthly manual effort.</li>
+                                    <li>Applied generative AI to incident diagnostics, cutting documentation turnaround time by 40%.</li>
                                 </ul>
                             </div>
-                        </article>
+                            <button class="expand-button" type="button" aria-expanded="false" aria-controls="exp-comcast">
+                                <span>Read more</span><i data-lucide="chevron-down" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="experience-entry" data-aos="fade-up">
+                        <div class="timeline-marker"><span></span></div>
+                        <div class="experience-panel">
+                            <div class="experience-header">
+                                <div>
+                                    <span class="date-chip">Mar 2022 – Apr 2024</span>
+                                    <h3>Senior Network Operations Center Engineer</h3>
+                                    <p class="company">Freshworks <span>Chennai, India</span></p>
+                                </div>
+                                <span class="role-icon"><i data-lucide="radar" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="stack-line"><span>STACK</span> AWS · Linux · Docker · Kubernetes · Datadog · New Relic · PagerDuty · Jira · ELK/Splunk · Terraform · Python · Bash</div>
+                            <ul class="achievement-list">
+                                <li>Owned first-line incident response and change management for multi-region AWS SaaS infrastructure serving 70,000+ customers, sustaining 99.95% uptime.</li>
+                                <li>Accelerated MTTD by <strong>40%</strong> using PagerDuty and Jira Service Management during critical outage triage.</li>
+                                <li>Resolved Linux and networking issues across DNS, TCP/IP, HTTPS, and AWS EC2/EKS, restoring 95%+ of high-severity alerts within SLA.</li>
+                            </ul>
+                            <div class="hidden-content" id="exp-freshworks">
+                                <ul class="achievement-list">
+                                    <li>Built Python and Shell automation to parse ELK/Splunk logs and remediate failing services, saving 15 hours per week.</li>
+                                    <li>Reduced false-positive alerts by 30% by re-tuning Datadog and New Relic thresholds across shifts.</li>
+                                    <li>Authored 25+ SOPs and ITIL-aligned runbooks, cutting new-engineer onboarding time by 25%.</li>
+                                    <li>Deployed Terraform fixes that reduced recurring failures by 20%.</li>
+                                </ul>
+                            </div>
+                            <button class="expand-button" type="button" aria-expanded="false" aria-controls="exp-freshworks">
+                                <span>Read more</span><i data-lucide="chevron-down" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="experience-entry" data-aos="fade-up">
+                        <div class="timeline-marker"><span></span></div>
+                        <div class="experience-panel">
+                            <div class="experience-header">
+                                <div>
+                                    <span class="date-chip">May 2019 – Feb 2022</span>
+                                    <h3>Cloud Operations Engineer</h3>
+                                    <p class="company">Cognisive IT Services (Formerly Indmax) <span>Coimbatore, India</span></p>
+                                </div>
+                                <span class="role-icon"><i data-lucide="server-cog" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="stack-line"><span>STACK</span> AWS · Linux · Prometheus · LogicMonitor · Bash · Python · Git · Jenkins</div>
+                            <ul class="achievement-list">
+                                <li>Managed multi-tenant AWS production environments across 15+ client architectures, sustaining 99.9% availability.</li>
+                                <li>Reduced critical incident detection time by <strong>35%</strong> through Prometheus and LogicMonitor alerting.</li>
+                                <li>Achieved 98% first-contact resolution on infrastructure tickets by resolving Linux configuration drift and access issues.</li>
+                            </ul>
+                            <div class="hidden-content" id="exp-cognisive">
+                                <ul class="achievement-list">
+                                    <li>Automated backup and patching workflows, saving 10+ hours of engineering toil weekly.</li>
+                                    <li>Supported Git and Jenkins change management, reducing deployment failures by 20% through validation gates.</li>
+                                    <li>Reduced monthly infrastructure spend by 22% by removing idle EC2 instances and orphaned EBS volumes.</li>
+                                </ul>
+                            </div>
+                            <button class="expand-button" type="button" aria-expanded="false" aria-controls="exp-cognisive">
+                                <span>Read more</span><i data-lucide="chevron-down" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-section">
+            <div class="mx-auto max-w-7xl px-5 sm:px-7 lg:px-9">
+                <div class="section-heading split-heading" data-aos="fade-up">
+                    <div>
+                        <span class="eyebrow eyebrow-accent">04 / Selected projects</span>
+                        <h2>Infrastructure designed to recover, scale, and deploy safely.</h2>
+                    </div>
+                    <p>Hands-on delivery across resilient AWS architecture, Kubernetes, CI/CD, GitOps, and deployment validation.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card" data-aos="fade-up">
+                        <div class="project-visual">
+                            <div class="visual-grid" aria-hidden="true"></div>
+                            <div class="project-node node-core"><i data-lucide="cloud-cog" aria-hidden="true"></i><span>AWS CORE</span></div>
+                            <div class="project-node node-left"><span>ALB</span></div>
+                            <div class="project-node node-right"><span>RDS</span></div>
+                            <div class="project-node node-bottom"><span>AUTO SCALING</span></div>
+                            <span class="project-badge"><i data-lucide="shield-check" aria-hidden="true"></i> High availability</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-meta"><span>PROJECT 01</span><span>AWS / NETWORKING</span></div>
+                            <h3>Three-Tier Web Application Infrastructure on AWS</h3>
+                            <p>Architected a multi-AZ environment across two availability zones and six subnets, targeting 99.99% simulated uptime. Least-privilege security groups mitigated 100% of simulated external attack vectors across application and database tiers.</p>
+                            <div class="tech-list"><span>VPC</span><span>EC2</span><span>RDS</span><span>ALB</span><span>ACM</span><span>Route 53</span></div>
+                            <div class="project-actions">
+                                <a href="https://github.com/Dhiva704/Devops-two-tier-flask-app.git" target="_blank" rel="noopener noreferrer" class="button button-small button-primary">View source <i data-lucide="external-link" aria-hidden="true"></i></a>
+                                <button type="button" class="button button-small button-secondary copy-button" data-copy="Three-Tier Web Application Infrastructure on AWS">Copy title</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-visual">
+                            <div class="visual-grid" aria-hidden="true"></div>
+                            <div class="project-node node-core"><i data-lucide="workflow" aria-hidden="true"></i><span>ARGO CD</span></div>
+                            <div class="project-node node-left"><span>JENKINS</span></div>
+                            <div class="project-node node-right"><span>EKS</span></div>
+                            <div class="project-node node-bottom"><span>HELM / ECR</span></div>
+                            <span class="project-badge"><i data-lucide="refresh-cw" aria-hidden="true"></i> GitOps delivery</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-meta"><span>PROJECT 02</span><span>KUBERNETES / GITOPS</span></div>
+                            <h3>Cloud-Native Microservices Platform — CI/CD & GitOps Pipeline</h3>
+                            <p>Built self-healing Kubernetes clusters with liveness and readiness probes for zero-downtime rolling updates. Automated vulnerability scanning and immutable image tagging reduced simulated deployment failures by 30%.</p>
+                            <div class="tech-list"><span>Jenkins</span><span>Docker</span><span>Kubernetes</span><span>Helm</span><span>Argo CD</span><span>EKS / ECR</span></div>
+                            <div class="project-actions">
+                                <a href="https://github.com/Dhiva704/two-tier-flask-production.git" target="_blank" rel="noopener noreferrer" class="button button-small button-primary">View source <i data-lucide="external-link" aria-hidden="true"></i></a>
+                                <button type="button" class="button button-small button-secondary copy-button" data-copy="Cloud-Native Microservices Platform — CI/CD & GitOps Pipeline">Copy title</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section-section">
+            <div class="mx-auto max-w-7xl px-5 sm:px-7 lg:px-9">
+                <div class="section-heading" data-aos="fade-up">
+                    <div>
+                        <span class="eyebrow eyebrow-accent">05 / Credentials</span>
+                        <h2>Certified expertise. Applied continuously.</h2>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="projects" class="relative overflow-hidden py-24 sm:py-28">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.12),transparent_28%),radial-gradient(circle_at_80%_70%,rgba(124,58,237,0.12),transparent_30%)]"></div>
-            <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-                <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-                    <span class="section-kicker justify-center before:hidden after:block after:h-[2px] after:w-8 after:rounded-full after:bg-gradient-to-r after:from-indigo-500 after:to-cyan-400">Projects</span>
-                    <h2 class="mt-4 text-4xl font-black tracking-[-0.04em] text-slate-950 dark:text-white md:text-5xl">Hands-on delivery across CI/CD and AWS infrastructure.</h2>
-                </div>
-
-                <div class="mt-14 grid gap-7 lg:grid-cols-2">
-                    <article class="project-card" data-aos="zoom-in-up">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?q=80&w=1400&auto=format&fit=crop" alt="CI/CD automation and deployment workflow" loading="lazy" decoding="async">
-                            <div class="project-badge"><i data-lucide="workflow" class="h-5 w-5"></i> CI/CD</div>
+                <div class="credentials-grid">
+                    <article class="credential-card" data-aos="fade-right">
+                        <div class="credential-badge">
+                            <img src="assets/aws-badge.png" alt="AWS Certified Solutions Architect Associate badge" loading="lazy" decoding="async">
                         </div>
-                        <div class="project-body">
-                            <h3>CI/CD Automation — Two-Tier Flask Application</h3>
-                            <p class="tech"><span>Technologies:</span> Docker, Docker Compose, Jenkins, GitHub, Flask, Gunicorn, MySQL, Nginx</p>
-                            <ul class="resume-list">
-                                <li>Architected a production-style two-tier Flask application using Docker, MySQL, Jenkins pipeline-as-code, and GitHub to practice end-to-end CI/CD workflows.</li>
-                                <li>Automated build and deployment pipelines triggered by GitHub commits — enabling continuous delivery with zero manual intervention.</li>
-                                <li>Containerized the Flask web tier and MySQL database tier using Docker Compose, ensuring environment consistency across local and production-style deployments.</li>
-                                <li>Configured persistent Docker volumes for MySQL to maintain data state across container restarts, and integrated Nginx as a reverse proxy for production-style routing.</li>
-                            </ul>
-                            <div class="project-actions">
-                                <a href="https://github.com/Dhiva704/two-tier-flask-production.git" target="_blank" rel="noopener noreferrer" class="primary-btn"><i data-lucide="send" class="h-4 w-4"></i>View Source</a>
-                                <button type="button" class="copy-btn" data-copy="CI/CD Automation — Two-Tier Flask Application">Copy Title</button>
-                            </div>
+                        <div>
+                            <span class="credential-type">Certification</span>
+                            <h3>AWS Certified Solutions Architect – Associate</h3>
+                            <p>Issued November 2023</p>
                         </div>
+                        <i data-lucide="award" aria-hidden="true"></i>
                     </article>
 
-                    <article class="project-card" data-aos="zoom-in-up" data-aos-delay="120">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1400&auto=format&fit=crop" alt="AWS cloud network infrastructure" loading="lazy" decoding="async">
-                            <div class="project-badge"><i data-lucide="cloud-cog" class="h-5 w-5"></i> AWS</div>
+                    <article class="credential-card" data-aos="fade-left">
+                        <div class="credential-icon"><i data-lucide="school" aria-hidden="true"></i></div>
+                        <div>
+                            <span class="credential-type">Education</span>
+                            <h3>Bachelor of Engineering, Computer Science</h3>
+                            <p>K.S. Rangasamy College of Technology · Anna University · 2019</p>
                         </div>
-                        <div class="project-body">
-                            <h3>AWS Three-Tier Infrastructure Deployment</h3>
-                            <p class="tech"><span>Technologies:</span> AWS, Terraform, VPC, EC2, Application Load Balancer, Auto Scaling Groups, Security Groups, NAT Gateway</p>
-                            <ul class="resume-list">
-                                <li>Designed and provisioned a three-tier AWS architecture using VPC, public/private subnets, EC2, Application Load Balancer, Target Groups, Auto Scaling Groups, and security controls.</li>
-                                <li>Configured Internet Gateway, NAT Gateway, Route Tables, and Security Groups to establish secure AWS network segmentation aligned with production architecture patterns.</li>
-                                <li>Strengthened hands-on proficiency in AWS high availability design, load balancing, auto-scaling, and cloud infrastructure governance.</li>
-                                <li>Implemented Infrastructure as Code (IaC) using Terraform — executing init, plan, apply, and destroy workflows to manage full infrastructure lifecycle.</li>
-                            </ul>
-                            <div class="project-actions">
-                                <a href="https://github.com/Dhiva704/Devops-two-tier-flask-app.git" target="_blank" rel="noopener noreferrer" class="primary-btn"><i data-lucide="send" class="h-4 w-4"></i>View Source</a>
-                                <button type="button" class="copy-btn" data-copy="CI/CD Automation — Two-Tier Flask Application">Copy Title</button>
-                            </div>
-                        </div>
+                        <span class="credential-location">Tiruchengode, India</span>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="certifications" class="relative py-24 sm:py-28">
-            <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-                <div class="grid gap-7 lg:grid-cols-2">
-                    <article class="glass-card relative overflow-hidden rounded-[2rem] p-7 sm:p-9" data-aos="fade-right">
-                        <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-orange-400/20 blur-2xl"></div>
-                        <span class="section-kicker">Certifications</span>
-                        <div class="mt-8 flex items-center gap-5">
-                            <div class="relative flex h-24 w-24 shrink-0 items-center justify-center rounded-3xl border border-orange-200 bg-orange-50 shadow-xl shadow-orange-500/10 dark:border-orange-400/20 dark:bg-orange-500/10">
-                                <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.3419559c682629072f1eb968d59dea0741772c0f.png" alt="AWS Certified Solutions Architect Associate badge" class="h-20 w-20 object-contain" loading="lazy" decoding="async">
-                            </div>
-                            <div>
-                                <h2 class="text-2xl font-black text-slate-950 dark:text-white">AWS Certified Solutions Architect – Associate |   Nov 2023 – Nov 2026	| </h2>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="glass-card relative overflow-hidden rounded-[2rem] p-7 sm:p-9" data-aos="fade-left">
-                        <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-cyan-400/20 blur-2xl"></div>
-                        <span class="section-kicker">Education</span>
-                        <div class="mt-8 flex items-start gap-5">
-                            <div class="role-icon shrink-0 text-cyan-500"><i data-lucide="school" class="h-7 w-7"></i></div>
-                            <div>
-                                <h2 class="text-2xl font-black text-slate-950 dark:text-white">Bachelor of Engineering in Computer Science							</h2>
-                                <p class="mt-3 text-lg font-semibold leading-8 text-slate-700 dark:text-slate-200">K.S.Rangasamy College of Technology •  2019 | Aﬀiliated to Anna University  •  Tiruchengode </p>
-                            </div>
-                        </div>
-                    </article>
+        <section id="contact" class="contact-section">
+            <div class="contact-panel" data-aos="fade-up">
+                <div class="contact-glow" aria-hidden="true"></div>
+                <div class="contact-content">
+                    <span class="eyebrow eyebrow-accent">06 / Open channel</span>
+                    <h2>Let’s build resilient site operations.</h2>
+                    <p>Open to Senior Site Operations, SRE, incident management, cloud reliability, and production engineering roles.</p>
+                    <div class="contact-actions">
+                        <a href="mailto:devadhiva704@gmail.com" class="button button-primary"><i data-lucide="mail" aria-hidden="true"></i>Email</a>
+                        <a href="https://www.linkedin.com/in/dhivakaran-t/" target="_blank" rel="noopener noreferrer" class="button button-secondary"><i data-lucide="linkedin" aria-hidden="true"></i>LinkedIn</a>
+                        <a href="https://github.com/Dhiva704" target="_blank" rel="noopener noreferrer" class="button button-secondary"><i data-lucide="github" aria-hidden="true"></i>GitHub</a>
+                        <button type="button" id="copy-email" class="button button-ghost copy-button" data-copy="devadhiva704@gmail.com"><i data-lucide="copy" aria-hidden="true"></i>Copy email</button>
+                    </div>
+                </div>
+                <div class="contact-status" aria-label="Current availability">
+                    <span class="status-dot"></span>
+                    <strong>STATUS</strong>
+                    <p>Open to new opportunities</p>
+                    <hr>
+                    <span>LOCATION</span>
+                    <p>Chennai, India</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="contact" class="relative overflow-hidden border-t border-slate-200/70 bg-white py-20 dark:border-white/10 dark:bg-slate-950">
-        <div class="absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-indigo-500/15 blur-3xl"></div>
-        <div class="mx-auto max-w-4xl px-5 text-center sm:px-6 lg:px-8">
-            <span class="section-kicker justify-center before:hidden after:block after:h-[2px] after:w-8 after:rounded-full after:bg-gradient-to-r after:from-indigo-500 after:to-cyan-400">Contact</span>
-            <h2 class="mt-4 text-4xl font-black tracking-[-0.04em] text-slate-950 dark:text-white md:text-5xl">Let’s build resilient production operations.</h2>
-            <p class="mx-auto mt-5 max-w-2xl text-base font-semibold leading-8 text-slate-600 dark:text-slate-300">Open to Engineering Operations, SRE-aligned production operations, incident management, and cloud reliability roles.</p>
-
-            <div class="mt-10 flex flex-wrap justify-center gap-4">
-                <a href="mailto:devadhiva704@gmail.com" class="contact-btn"><i data-lucide="mail" class="h-5 w-5"></i>Email</a>
-                <a href="https://www.linkedin.com/in/dhivakaran-t/" target="_blank" rel="noopener noreferrer" class="contact-btn"><i data-lucide="linkedin" class="h-5 w-5"></i>LinkedIn</a>
-                <a href="https://github.com/Dhiva704" target="_blank" rel="noopener noreferrer" class="contact-btn"><i data-lucide="github" class="h-5 w-5"></i>GitHub</a>
-                <button type="button" id="copy-email" class="contact-btn"><i data-lucide="copy" class="h-5 w-5"></i>Copy Email</button>
-            </div>
-
-            <p class="mt-12 text-sm font-semibold text-slate-500 dark:text-slate-500">© <span id="year"></span> Dhivakaran T. Built with HTML, Tailwind CSS, custom CSS, and vanilla JavaScript.</p>
+    <footer class="site-footer">
+        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-7 sm:px-7 lg:flex-row lg:px-9">
+            <p>© <span id="year"></span> Dhivakaran T</p>
+            <p class="footer-tech">HTML · Tailwind CSS · Canvas · Vanilla JavaScript</p>
+            <a href="#home" class="footer-top">Back to top <i data-lucide="arrow-up" aria-hidden="true"></i></a>
         </div>
     </footer>
 
-    <button id="back-to-top" type="button" aria-label="Back to top" class="hidden fixed bottom-6 right-6 z-50 rounded-full border border-white/20 bg-slate-950 p-3 text-white shadow-2xl shadow-indigo-500/25 transition-all duration-300 hover:-translate-y-1 hover:bg-indigo-600 dark:bg-white dark:text-slate-950 dark:hover:bg-cyan-200">
-        <i data-lucide="arrow-up" class="h-5 w-5"></i>
+    <button id="back-to-top" type="button" aria-label="Back to top" class="back-to-top">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
     </button>
-
     <div id="toast" role="status" aria-live="polite" class="toast">Copied</div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
