@@ -42,6 +42,16 @@
         html.setAttribute('data-theme', mode);
         themeToggle?.setAttribute('aria-pressed', String(isDark));
         themeToggle?.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+        updateThemeIcon(isDark);
+    }
+
+    function updateThemeIcon(isDark) {
+        const icon = themeToggle?.querySelector('i');
+        if (!icon) return;
+        // Use heroicons moon/sun SVGs
+        const moonSVG = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0118.457 12a9.72 9.72 0 00-3.295 5.802A9.716 9.716 0 0012 21.75a9.716 9.716 0 008.368-3.004c1.085-.32 2.132-.87 3.004-1.75zM9.75 16.5a6.75 6.75 0 110-13.5 6.75 6.75 0 010 13.5zm0-1.5a5.25 5.25 0 100-10.5 5.25 5.25 0 000 10.5z"/></svg>';
+        const sunSVG = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 16v2m9-9h2m-4 0H7m15 0H9m16-9a3 3 0 11-5.196 1.032m3.512.968a3 3 0 01-3.512-.968m-1.5 5.656a3 3 0 11-5.196-1.032m3.512.968a3 3 0 01-3.512-.968m-5.656 1.5a3 3 0 11-1.032-5.196m1.032 3.512a3 3 0 011.032-3.512M6.636 12.364a3 3 0 11-4.242 0m4.242 4.242a3 3 0 114.242 0M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/></svg>';
+        icon.innerHTML = isDark ? moonSVG : sunSVG;
     }
 
     function initTheme() {
