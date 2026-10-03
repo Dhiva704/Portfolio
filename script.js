@@ -46,12 +46,23 @@
     }
 
     function updateThemeIcon(isDark) {
-        const icon = themeToggle?.querySelector('i');
-        if (!icon) return;
-        // Use heroicons moon/sun SVGs
-        const moonSVG = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0118.457 12a9.72 9.72 0 00-3.295 5.802A9.716 9.716 0 0012 21.75a9.716 9.716 0 008.368-3.004c1.085-.32 2.132-.87 3.004-1.75zM9.75 16.5a6.75 6.75 0 110-13.5 6.75 6.75 0 010 13.5zm0-1.5a5.25 5.25 0 100-10.5 5.25 5.25 0 000 10.5z"/></svg>';
-        const sunSVG = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 16v2m9-9h2m-4 0H7m15 0H9m16-9a3 3 0 11-5.196 1.032m3.512.968a3 3 0 01-3.512-.968m-1.5 5.656a3 3 0 11-5.196-1.032m3.512.968a3 3 0 01-3.512-.968m-5.656 1.5a3 3 0 11-1.032-5.196m1.032 3.512a3 3 0 011.032-3.512M6.636 12.364a3 3 0 11-4.242 0m4.242 4.242a3 3 0 114.242 0M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/></svg>';
-        icon.innerHTML = isDark ? moonSVG : sunSVG;
+        if (!themeToggle) return;
+        // Sun = shown in dark mode (click to go light), Moon = shown in light mode (click to go dark)
+        const sunSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <line x1="12" y1="2" x2="12" y2="6"/>
+            <line x1="12" y1="18" x2="12" y2="22"/>
+            <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
+            <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+            <line x1="2" y1="12" x2="6" y2="12"/>
+            <line x1="18" y1="12" x2="22" y2="12"/>
+            <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/>
+            <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+        </svg>`;
+        const moonSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>`;
+        themeToggle.innerHTML = isDark ? sunSVG : moonSVG;
     }
 
     function initTheme() {
