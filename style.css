@@ -71,28 +71,40 @@ img {
 
 /* Company logos in experience section */
 .company-logo {
-    height: 2.5rem;
+    height: 2rem;
     width: auto;
-    margin-right: 0.75rem;
-    vertical-align: middle;
+    max-width: 7rem;
     object-fit: contain;
+}
+
+/* White logos - invert for dark theme visibility */
+.company-logo[src*="Comcast"] {
     filter: brightness(0) invert(1);
 }
-[data-theme="dark"] .company-logo {
+[data-theme="light"] .company-logo[src*="Comcast"] {
+    filter: none;
+}
+
+/* Black/dark logos - invert for dark theme visibility */
+.company-logo[src*="cognisive"] {
     filter: brightness(0) invert(1);
 }
-[data-theme="light"] .company-logo {
-    filter: brightness(0) invert(0);
+[data-theme="light"] .company-logo[src*="cognisive"] {
+    filter: none;
+}
+
+/* Colorful logos - no filter needed */
+.company-logo[src*="Freshworks"] {
+    filter: none;
 }
 
 /* Role icon in experience header */
 .role-icon {
-    width: 2.5rem;
+    min-width: 5rem;
     height: 2.5rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-right: 0.75rem;
     flex-shrink: 0;
 }
 .role-icon i {
