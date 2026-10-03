@@ -1186,6 +1186,15 @@ button {
     line-height: 1.5;
 }
 
+.role-tagline {
+    margin: 0.6rem 0 0;
+    color: var(--cyan);
+    font-size: 0.78rem;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.5;
+}
+
 .stack-line span {
     color: var(--cyan);
     font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
